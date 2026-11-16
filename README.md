@@ -1,4 +1,4 @@
-# CLARO: Channel-Level Alarm-time Root cause attribution with Online residuals
+# Alarm-Conditioned Root Cause Attribution with Autoregressive Residuals and LLM Explanations for Industrial Control Systems
 
 CLARO detects attacks on an industrial control system from its sensor streams and, at each
 alarm, ranks the channels most likely to have been manipulated directly. It builds a
