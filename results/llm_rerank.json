@@ -1,0 +1,2877 @@
+{
+  "selected": "llm",
+  "model": "gemma4:31b",
+  "system_prompt": "You are an industrial control engineer reviewing a data-learned dependency graph for the HAI 23.05 testbed.\nUse ONLY the following process description, taken from the HAI technical-details document (v4.0).\n\nSubsystems\n  P1 Boiler (Emerson Ovation DCS): water-to-water heat transfer. Main water tank -> feedwater pump -> heat-transfer system -> return water tank;\n     heating system and cooling system. Control loops:\n       P1-PC: PCV01D/PCV02D keep pressure PIT01 at setpoint B2016.\n       P1-LC: LCV01D keeps return-tank level LIT01 at setpoint B3004, with feed-forward from outflow valve FCV03D.\n       P1-FC: FCV03D keeps return-tank outflow FT03 at setpoint B3005.\n       P1-TC: FCV01D/FCV02D keep temperature TIT01 at setpoint B4022 (cascade with heating flow FT02).\n       P1-CC: cooling pump PP04 runs at setpoint PP04SP when main-tank temperature TIT03 is in range.\n     *D is a valve/pump command, *Z its measured position; FT0nZ is converted from FT0n.\n  DCS internal points x1001_*, x1002_*, x1003_*: outputs of boiler DCS logic blocks 1001 (pressure control),\n     1002 (level and outflow control) and 1003 (temperature control); x1001_15_ASSIGN_OUT is the pressure demand B2016.\n  P2 Turbine (GE Mark VIe): rotor kit. Speed controller output SCO drives the motor so that speed SIT01 follows the\n     speed demand AutoSD; VIBTR01-04 are vibration probes; switches, lamps and 24Vdc are status signals.\n  P3 Water treatment (Siemens PLC): pumps water to the upper tank; level LIT01 is controlled with valve LCV01D and pump LCP01D;\n     FIT01 and PIT01 are inflow rate and pressure.\n  P4 HIL simulator: steam-turbine model (P4_ST_*), hydro-turbine model (P4_HT_*) and grid load (P4_LD).\nDocumented couplings between subsystems\n  - Boiler pressure and temperature (P1_PIT01, P1_TIT01) determine STM steam pressure/temperature (P4_ST_PT01, P4_ST_TT01);\n    boiler pressure, temperature and level are sent to the HIL simulator.\n  - The boiler main-valve opening follows the STM steam-valve/gate opening (P4_ST_GOV).\n  - The STM generates the turbine speed-setpoint trajectory (P2 AutoSD); P2_SCST follows the STM frequency change.\n  - P3 flow, pressure and level are sent to the HTM; HTM discharge/pumping demands drive P3 LCV01D/LCP01D.\n  - There is no water connection between the boiler (P1) and the water-treatment process (P3); P2 is a rotor kit with no water flow.\nYour task: an anomaly detector has just raised an alarm. From the candidate channels,\nrank the ones most likely to have been DIRECTLY manipulated by an attacker (a setpoint, command,\nor measurement that was altered), as opposed to channels that only respond to the manipulation\nthrough the process or control loops. Use the residual evidence and the process description.\nReturn ONLY JSON: {\"ranking\": [\"CHANNEL\", ...]} with the five most likely channels, best first,\nusing channel names exactly as given.",
+  "validation": {
+    "claro": {
+      "N": 19,
+      "hit1_successes": 13,
+      "hit5_successes": 15,
+      "recall1": 0.543859649122807,
+      "recall5": 0.6929824561403508,
+      "alarm_within_deadline": 17
+    },
+    "llm": {
+      "N": 19,
+      "hit1_successes": 14,
+      "hit5_successes": 15,
+      "recall1": 0.5964912280701755,
+      "recall5": 0.6929824561403508,
+      "alarm_within_deadline": 17
+    },
+    "fusion": {
+      "N": 19,
+      "hit1_successes": 14,
+      "hit5_successes": 15,
+      "recall1": 0.5964912280701755,
+      "recall5": 0.6929824561403508,
+      "alarm_within_deadline": 17
+    }
+  },
+  "suffix": {
+    "claro/seed11": {
+      "N": 9,
+      "hit1_successes": 5,
+      "hit5_successes": 5,
+      "recall1": 0.4166666666666667,
+      "recall5": 0.5,
+      "alarm_within_deadline": 6,
+      "episodes": [
+        {
+          "attack_id": "A214",
+          "raw_start": 117243,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A215",
+          "raw_start": 119763,
+          "n_targets": 2,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A216",
+          "raw_start": 124802,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 7,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A218",
+          "raw_start": 135660,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 2,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A219",
+          "raw_start": 139083,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 5,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A226",
+          "raw_start": 214328,
+          "n_targets": 2,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 6,
+          "hit1": 1,
+          "recall1": 0.5,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A228",
+          "raw_start": 224100,
+          "n_targets": 4,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 3,
+          "hit1": 1,
+          "recall1": 0.25,
+          "hit5": 1,
+          "recall5": 0.5,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A230",
+          "raw_start": 236580,
+          "n_targets": 3,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 1,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A234",
+          "raw_start": 257040,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        }
+      ]
+    },
+    "llm/seed11": {
+      "N": 9,
+      "hit1_successes": 5,
+      "hit5_successes": 5,
+      "recall1": 0.4166666666666667,
+      "recall5": 0.5277777777777778,
+      "alarm_within_deadline": 6,
+      "episodes": [
+        {
+          "attack_id": "A214",
+          "raw_start": 117243,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A215",
+          "raw_start": 119763,
+          "n_targets": 2,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A216",
+          "raw_start": 124802,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 7,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A218",
+          "raw_start": 135660,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 2,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A219",
+          "raw_start": 139083,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 5,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A226",
+          "raw_start": 214328,
+          "n_targets": 2,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 6,
+          "hit1": 1,
+          "recall1": 0.5,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A228",
+          "raw_start": 224100,
+          "n_targets": 4,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 3,
+          "hit1": 1,
+          "recall1": 0.25,
+          "hit5": 1,
+          "recall5": 0.75,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A230",
+          "raw_start": 236580,
+          "n_targets": 3,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 1,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A234",
+          "raw_start": 257040,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        }
+      ]
+    },
+    "llm/seed12": {
+      "N": 9,
+      "hit1_successes": 5,
+      "hit5_successes": 5,
+      "recall1": 0.4166666666666667,
+      "recall5": 0.5277777777777778,
+      "alarm_within_deadline": 6,
+      "episodes": [
+        {
+          "attack_id": "A214",
+          "raw_start": 117243,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A215",
+          "raw_start": 119763,
+          "n_targets": 2,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A216",
+          "raw_start": 124802,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 7,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A218",
+          "raw_start": 135660,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 2,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A219",
+          "raw_start": 139083,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 5,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A226",
+          "raw_start": 214328,
+          "n_targets": 2,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 6,
+          "hit1": 1,
+          "recall1": 0.5,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A228",
+          "raw_start": 224100,
+          "n_targets": 4,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 3,
+          "hit1": 1,
+          "recall1": 0.25,
+          "hit5": 1,
+          "recall5": 0.75,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A230",
+          "raw_start": 236580,
+          "n_targets": 3,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 1,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A234",
+          "raw_start": 257040,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        }
+      ]
+    },
+    "llm/seed13": {
+      "N": 9,
+      "hit1_successes": 5,
+      "hit5_successes": 5,
+      "recall1": 0.4166666666666667,
+      "recall5": 0.5277777777777778,
+      "alarm_within_deadline": 6,
+      "episodes": [
+        {
+          "attack_id": "A214",
+          "raw_start": 117243,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A215",
+          "raw_start": 119763,
+          "n_targets": 2,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A216",
+          "raw_start": 124802,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 7,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A218",
+          "raw_start": 135660,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 2,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A219",
+          "raw_start": 139083,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 5,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A226",
+          "raw_start": 214328,
+          "n_targets": 2,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 6,
+          "hit1": 1,
+          "recall1": 0.5,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A228",
+          "raw_start": 224100,
+          "n_targets": 4,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 3,
+          "hit1": 1,
+          "recall1": 0.25,
+          "hit5": 1,
+          "recall5": 0.75,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A230",
+          "raw_start": 236580,
+          "n_targets": 3,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 1,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A234",
+          "raw_start": 257040,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        }
+      ]
+    },
+    "fusion/seed11": {
+      "N": 9,
+      "hit1_successes": 5,
+      "hit5_successes": 5,
+      "recall1": 0.4166666666666667,
+      "recall5": 0.5,
+      "alarm_within_deadline": 6,
+      "episodes": [
+        {
+          "attack_id": "A214",
+          "raw_start": 117243,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A215",
+          "raw_start": 119763,
+          "n_targets": 2,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A216",
+          "raw_start": 124802,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 7,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A218",
+          "raw_start": 135660,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 2,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A219",
+          "raw_start": 139083,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 5,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A226",
+          "raw_start": 214328,
+          "n_targets": 2,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 6,
+          "hit1": 1,
+          "recall1": 0.5,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A228",
+          "raw_start": 224100,
+          "n_targets": 4,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 3,
+          "hit1": 1,
+          "recall1": 0.25,
+          "hit5": 1,
+          "recall5": 0.5,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A230",
+          "raw_start": 236580,
+          "n_targets": 3,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 1,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A234",
+          "raw_start": 257040,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        }
+      ]
+    },
+    "fusion/seed12": {
+      "N": 9,
+      "hit1_successes": 5,
+      "hit5_successes": 5,
+      "recall1": 0.4166666666666667,
+      "recall5": 0.5,
+      "alarm_within_deadline": 6,
+      "episodes": [
+        {
+          "attack_id": "A214",
+          "raw_start": 117243,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A215",
+          "raw_start": 119763,
+          "n_targets": 2,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A216",
+          "raw_start": 124802,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 7,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A218",
+          "raw_start": 135660,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 2,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A219",
+          "raw_start": 139083,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 5,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A226",
+          "raw_start": 214328,
+          "n_targets": 2,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 6,
+          "hit1": 1,
+          "recall1": 0.5,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A228",
+          "raw_start": 224100,
+          "n_targets": 4,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 3,
+          "hit1": 1,
+          "recall1": 0.25,
+          "hit5": 1,
+          "recall5": 0.5,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A230",
+          "raw_start": 236580,
+          "n_targets": 3,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 1,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A234",
+          "raw_start": 257040,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        }
+      ]
+    },
+    "fusion/seed13": {
+      "N": 9,
+      "hit1_successes": 5,
+      "hit5_successes": 5,
+      "recall1": 0.4166666666666667,
+      "recall5": 0.5,
+      "alarm_within_deadline": 6,
+      "episodes": [
+        {
+          "attack_id": "A214",
+          "raw_start": 117243,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A215",
+          "raw_start": 119763,
+          "n_targets": 2,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A216",
+          "raw_start": 124802,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 7,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A218",
+          "raw_start": 135660,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 2,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A219",
+          "raw_start": 139083,
+          "n_targets": 1,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 5,
+          "hit1": 1,
+          "recall1": 1.0,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A226",
+          "raw_start": 214328,
+          "n_targets": 2,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 6,
+          "hit1": 1,
+          "recall1": 0.5,
+          "hit5": 1,
+          "recall5": 1.0,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A228",
+          "raw_start": 224100,
+          "n_targets": 4,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 3,
+          "hit1": 1,
+          "recall1": 0.25,
+          "hit5": 1,
+          "recall5": 0.5,
+          "best_rank_top5": 1
+        },
+        {
+          "attack_id": "A230",
+          "raw_start": 236580,
+          "n_targets": 3,
+          "alarm_within_deadline": true,
+          "snapshots_within_deadline": 1,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        },
+        {
+          "attack_id": "A234",
+          "raw_start": 257040,
+          "n_targets": 1,
+          "alarm_within_deadline": false,
+          "snapshots_within_deadline": 0,
+          "hit1": 0,
+          "recall1": 0.0,
+          "hit5": 0,
+          "recall5": 0.0,
+          "best_rank_top5": null
+        }
+      ]
+    }
+  },
+  "log": [
+    {
+      "snapshot": 813,
+      "end": 124762,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PCV01D",
+        "P1_TIT02"
+      ]
+    },
+    {
+      "snapshot": 814,
+      "end": 124764,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_FT01",
+        "P1_LIT01"
+      ]
+    },
+    {
+      "snapshot": 815,
+      "end": 124766,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_FCV01Z",
+        "P1_FT01"
+      ]
+    },
+    {
+      "snapshot": 816,
+      "end": 124781,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT01Z",
+        "P1_FT01",
+        "P1_LIT01"
+      ]
+    },
+    {
+      "snapshot": 817,
+      "end": 124783,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT02",
+        "P1_PIT02",
+        "P1_FCV03D"
+      ]
+    },
+    {
+      "snapshot": 818,
+      "end": 124785,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_FT01",
+        "P1_TIT02"
+      ]
+    },
+    {
+      "snapshot": 819,
+      "end": 124801,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT02",
+        "P1_PIT02",
+        "P1_FT02Z"
+      ]
+    },
+    {
+      "snapshot": 894,
+      "end": 135619,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "x1003_10_SETPOINT_OUT",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 895,
+      "end": 135664,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_PIT02",
+        "P1_FT02"
+      ]
+    },
+    {
+      "snapshot": 917,
+      "end": 139041,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "x1003_10_SETPOINT_OUT",
+        "P1_LCV01D"
+      ]
+    },
+    {
+      "snapshot": 918,
+      "end": 139059,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_FT03"
+      ]
+    },
+    {
+      "snapshot": 919,
+      "end": 139063,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 920,
+      "end": 139077,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 921,
+      "end": 139094,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 1375,
+      "end": 214286,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_TIT02",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1376,
+      "end": 214295,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_FT03",
+        "P1_FT03Z"
+      ]
+    },
+    {
+      "snapshot": 1377,
+      "end": 214301,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PP04",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1378,
+      "end": 214305,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PIT01",
+        "P1_FT03"
+      ]
+    },
+    {
+      "snapshot": 1379,
+      "end": 214317,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV02D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_PP04"
+      ]
+    },
+    {
+      "snapshot": 1380,
+      "end": 214339,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV02D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1447,
+      "end": 224062,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P2_SCO",
+        "P1_FCV02D",
+        "P1_LCV01D",
+        "P1_FCV03D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 1448,
+      "end": 224079,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_PIT02",
+        "P1_LCV01D",
+        "P2_SCO"
+      ]
+    },
+    {
+      "snapshot": 1449,
+      "end": 224091,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_PIT01",
+        "P1_PIT02",
+        "P2_SCO"
+      ]
+    },
+    {
+      "snapshot": 1525,
+      "end": 236551,
+      "variant": "llm",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_PP04D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_TIT01"
+      ]
+    },
+    {
+      "snapshot": 813,
+      "end": 124762,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PCV01D",
+        "P1_TIT02"
+      ]
+    },
+    {
+      "snapshot": 814,
+      "end": 124764,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_FT01",
+        "P1_LIT01"
+      ]
+    },
+    {
+      "snapshot": 815,
+      "end": 124766,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_FCV01Z",
+        "P1_FT01"
+      ]
+    },
+    {
+      "snapshot": 816,
+      "end": 124781,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT01Z",
+        "P1_FT01",
+        "P1_LIT01"
+      ]
+    },
+    {
+      "snapshot": 817,
+      "end": 124783,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT02",
+        "P1_PIT02",
+        "P1_FCV03D"
+      ]
+    },
+    {
+      "snapshot": 818,
+      "end": 124785,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_FT01",
+        "P1_TIT02"
+      ]
+    },
+    {
+      "snapshot": 819,
+      "end": 124801,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT02",
+        "P1_PIT02",
+        "P1_FT02Z"
+      ]
+    },
+    {
+      "snapshot": 894,
+      "end": 135619,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "x1003_10_SETPOINT_OUT",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 895,
+      "end": 135664,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_PIT02",
+        "P1_FT02"
+      ]
+    },
+    {
+      "snapshot": 917,
+      "end": 139041,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "x1003_10_SETPOINT_OUT",
+        "P1_LCV01D"
+      ]
+    },
+    {
+      "snapshot": 918,
+      "end": 139059,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_FT03"
+      ]
+    },
+    {
+      "snapshot": 919,
+      "end": 139063,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 920,
+      "end": 139077,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 921,
+      "end": 139094,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 1375,
+      "end": 214286,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_TIT02",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1376,
+      "end": 214295,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_FT03",
+        "P1_FT03Z"
+      ]
+    },
+    {
+      "snapshot": 1377,
+      "end": 214301,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PP04",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1378,
+      "end": 214305,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PIT01",
+        "P1_FT03"
+      ]
+    },
+    {
+      "snapshot": 1379,
+      "end": 214317,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV02D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_PP04"
+      ]
+    },
+    {
+      "snapshot": 1380,
+      "end": 214339,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV02D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1447,
+      "end": 224062,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P2_SCO",
+        "P1_FCV02D",
+        "P1_LCV01D",
+        "P1_FCV03D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 1448,
+      "end": 224079,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_PIT02",
+        "P1_LCV01D",
+        "P2_SCO"
+      ]
+    },
+    {
+      "snapshot": 1449,
+      "end": 224091,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_PIT01",
+        "P1_PIT02",
+        "P2_SCO"
+      ]
+    },
+    {
+      "snapshot": 1525,
+      "end": 236551,
+      "variant": "llm",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_PP04D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_TIT01"
+      ]
+    },
+    {
+      "snapshot": 813,
+      "end": 124762,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PCV01D",
+        "P1_TIT02"
+      ]
+    },
+    {
+      "snapshot": 814,
+      "end": 124764,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_FT01",
+        "P1_LIT01"
+      ]
+    },
+    {
+      "snapshot": 815,
+      "end": 124766,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_FCV01Z",
+        "P1_FT01"
+      ]
+    },
+    {
+      "snapshot": 816,
+      "end": 124781,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT01Z",
+        "P1_FT01",
+        "P1_LIT01"
+      ]
+    },
+    {
+      "snapshot": 817,
+      "end": 124783,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT02",
+        "P1_PIT02",
+        "P1_FCV03D"
+      ]
+    },
+    {
+      "snapshot": 818,
+      "end": 124785,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_FT01",
+        "P1_TIT02"
+      ]
+    },
+    {
+      "snapshot": 819,
+      "end": 124801,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT02",
+        "P1_PIT02",
+        "P1_FT02Z"
+      ]
+    },
+    {
+      "snapshot": 894,
+      "end": 135619,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "x1003_10_SETPOINT_OUT",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 895,
+      "end": 135664,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_PIT02",
+        "P1_FT02"
+      ]
+    },
+    {
+      "snapshot": 917,
+      "end": 139041,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "x1003_10_SETPOINT_OUT",
+        "P1_LCV01D"
+      ]
+    },
+    {
+      "snapshot": 918,
+      "end": 139059,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_FT03"
+      ]
+    },
+    {
+      "snapshot": 919,
+      "end": 139063,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 920,
+      "end": 139077,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 921,
+      "end": 139094,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 1375,
+      "end": 214286,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_TIT02",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1376,
+      "end": 214295,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_FT03",
+        "P1_FT03Z"
+      ]
+    },
+    {
+      "snapshot": 1377,
+      "end": 214301,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PP04",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1378,
+      "end": 214305,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PIT01",
+        "P1_FT03"
+      ]
+    },
+    {
+      "snapshot": 1379,
+      "end": 214317,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV02D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_PP04"
+      ]
+    },
+    {
+      "snapshot": 1380,
+      "end": 214339,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV02D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1447,
+      "end": 224062,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P2_SCO",
+        "P1_FCV02D",
+        "P1_LCV01D",
+        "P1_FCV03D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 1448,
+      "end": 224079,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_PIT02",
+        "P1_LCV01D",
+        "P2_SCO"
+      ]
+    },
+    {
+      "snapshot": 1449,
+      "end": 224091,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_PIT01",
+        "P1_PIT02",
+        "P2_SCO"
+      ]
+    },
+    {
+      "snapshot": 1525,
+      "end": 236551,
+      "variant": "llm",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_PP04D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_TIT01"
+      ]
+    },
+    {
+      "snapshot": 813,
+      "end": 124762,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PCV01D",
+        "P1_TIT02"
+      ]
+    },
+    {
+      "snapshot": 814,
+      "end": 124764,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_FT01",
+        "P1_LIT01"
+      ]
+    },
+    {
+      "snapshot": 815,
+      "end": 124766,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_FCV01Z",
+        "P1_FT01"
+      ]
+    },
+    {
+      "snapshot": 816,
+      "end": 124781,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT01Z",
+        "P1_FT01",
+        "P1_LIT01"
+      ]
+    },
+    {
+      "snapshot": 817,
+      "end": 124783,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT02",
+        "P1_PIT02",
+        "P1_FCV03D"
+      ]
+    },
+    {
+      "snapshot": 818,
+      "end": 124785,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_FT01",
+        "P1_TIT02"
+      ]
+    },
+    {
+      "snapshot": 819,
+      "end": 124801,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT02",
+        "P1_PIT02",
+        "P1_FT02Z"
+      ]
+    },
+    {
+      "snapshot": 894,
+      "end": 135619,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "x1003_10_SETPOINT_OUT",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 895,
+      "end": 135664,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_PIT02",
+        "P1_FT02"
+      ]
+    },
+    {
+      "snapshot": 917,
+      "end": 139041,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "x1003_10_SETPOINT_OUT",
+        "P1_LCV01D"
+      ]
+    },
+    {
+      "snapshot": 918,
+      "end": 139059,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_FT03"
+      ]
+    },
+    {
+      "snapshot": 919,
+      "end": 139063,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 920,
+      "end": 139077,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 921,
+      "end": 139094,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 1375,
+      "end": 214286,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_TIT02",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1376,
+      "end": 214295,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_FT03",
+        "P1_FT03Z"
+      ]
+    },
+    {
+      "snapshot": 1377,
+      "end": 214301,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PP04",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1378,
+      "end": 214305,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PIT01",
+        "P1_FT03"
+      ]
+    },
+    {
+      "snapshot": 1379,
+      "end": 214317,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV02D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_PP04"
+      ]
+    },
+    {
+      "snapshot": 1380,
+      "end": 214339,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV02D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1447,
+      "end": 224062,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P2_SCO",
+        "P1_FCV02D",
+        "P1_LCV01D",
+        "P1_FCV03D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 1448,
+      "end": 224079,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_PIT02",
+        "P1_LCV01D",
+        "P2_SCO"
+      ]
+    },
+    {
+      "snapshot": 1449,
+      "end": 224091,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_PIT01",
+        "P1_PIT02",
+        "P2_SCO"
+      ]
+    },
+    {
+      "snapshot": 1525,
+      "end": 236551,
+      "variant": "fusion",
+      "seed": 11,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_PP04D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_TIT01"
+      ]
+    },
+    {
+      "snapshot": 813,
+      "end": 124762,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PCV01D",
+        "P1_TIT02"
+      ]
+    },
+    {
+      "snapshot": 814,
+      "end": 124764,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_FT01",
+        "P1_LIT01"
+      ]
+    },
+    {
+      "snapshot": 815,
+      "end": 124766,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_FCV01Z",
+        "P1_FT01"
+      ]
+    },
+    {
+      "snapshot": 816,
+      "end": 124781,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT01Z",
+        "P1_FT01",
+        "P1_LIT01"
+      ]
+    },
+    {
+      "snapshot": 817,
+      "end": 124783,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT02",
+        "P1_PIT02",
+        "P1_FCV03D"
+      ]
+    },
+    {
+      "snapshot": 818,
+      "end": 124785,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_FT01",
+        "P1_TIT02"
+      ]
+    },
+    {
+      "snapshot": 819,
+      "end": 124801,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT02",
+        "P1_PIT02",
+        "P1_FT02Z"
+      ]
+    },
+    {
+      "snapshot": 894,
+      "end": 135619,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "x1003_10_SETPOINT_OUT",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 895,
+      "end": 135664,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_PIT02",
+        "P1_FT02"
+      ]
+    },
+    {
+      "snapshot": 917,
+      "end": 139041,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "x1003_10_SETPOINT_OUT",
+        "P1_LCV01D"
+      ]
+    },
+    {
+      "snapshot": 918,
+      "end": 139059,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_FT03"
+      ]
+    },
+    {
+      "snapshot": 919,
+      "end": 139063,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 920,
+      "end": 139077,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 921,
+      "end": 139094,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 1375,
+      "end": 214286,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_TIT02",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1376,
+      "end": 214295,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_FT03",
+        "P1_FT03Z"
+      ]
+    },
+    {
+      "snapshot": 1377,
+      "end": 214301,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PP04",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1378,
+      "end": 214305,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PIT01",
+        "P1_FT03"
+      ]
+    },
+    {
+      "snapshot": 1379,
+      "end": 214317,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV02D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_PP04"
+      ]
+    },
+    {
+      "snapshot": 1380,
+      "end": 214339,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV02D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1447,
+      "end": 224062,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P2_SCO",
+        "P1_FCV02D",
+        "P1_LCV01D",
+        "P1_FCV03D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 1448,
+      "end": 224079,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_PIT02",
+        "P1_LCV01D",
+        "P2_SCO"
+      ]
+    },
+    {
+      "snapshot": 1449,
+      "end": 224091,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_PIT01",
+        "P1_PIT02",
+        "P2_SCO"
+      ]
+    },
+    {
+      "snapshot": 1525,
+      "end": 236551,
+      "variant": "fusion",
+      "seed": 12,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_PP04D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_TIT01"
+      ]
+    },
+    {
+      "snapshot": 813,
+      "end": 124762,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PCV01D",
+        "P1_TIT02"
+      ]
+    },
+    {
+      "snapshot": 814,
+      "end": 124764,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_FT01",
+        "P1_LIT01"
+      ]
+    },
+    {
+      "snapshot": 815,
+      "end": 124766,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_FCV01Z",
+        "P1_FT01"
+      ]
+    },
+    {
+      "snapshot": 816,
+      "end": 124781,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT01Z",
+        "P1_FT01",
+        "P1_LIT01"
+      ]
+    },
+    {
+      "snapshot": 817,
+      "end": 124783,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT02",
+        "P1_PIT02",
+        "P1_FCV03D"
+      ]
+    },
+    {
+      "snapshot": 818,
+      "end": 124785,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_FT01",
+        "P1_TIT02"
+      ]
+    },
+    {
+      "snapshot": 819,
+      "end": 124801,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV01D",
+        "P1_FCV01Z",
+        "P1_FT02",
+        "P1_PIT02",
+        "P1_FT02Z"
+      ]
+    },
+    {
+      "snapshot": 894,
+      "end": 135619,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "x1003_10_SETPOINT_OUT",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 895,
+      "end": 135664,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_PIT02",
+        "P1_FT02"
+      ]
+    },
+    {
+      "snapshot": 917,
+      "end": 139041,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "x1003_10_SETPOINT_OUT",
+        "P1_LCV01D"
+      ]
+    },
+    {
+      "snapshot": 918,
+      "end": 139059,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_FT03"
+      ]
+    },
+    {
+      "snapshot": 919,
+      "end": 139063,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 920,
+      "end": 139077,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 921,
+      "end": 139094,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_FCV02D",
+        "P1_FCV01D",
+        "P1_LCV01D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 1375,
+      "end": 214286,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_TIT02",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1376,
+      "end": 214295,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_FT03",
+        "P1_FT03Z"
+      ]
+    },
+    {
+      "snapshot": 1377,
+      "end": 214301,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PP04",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1378,
+      "end": 214305,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_PIT01",
+        "P1_FT03"
+      ]
+    },
+    {
+      "snapshot": 1379,
+      "end": 214317,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV02D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_PP04"
+      ]
+    },
+    {
+      "snapshot": 1380,
+      "end": 214339,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_FCV03D",
+        "P1_PCV02D",
+        "P1_PCV01D",
+        "P1_LCV01D",
+        "P1_PIT01"
+      ]
+    },
+    {
+      "snapshot": 1447,
+      "end": 224062,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P2_SCO",
+        "P1_FCV02D",
+        "P1_LCV01D",
+        "P1_FCV03D",
+        "P1_PIT02"
+      ]
+    },
+    {
+      "snapshot": 1448,
+      "end": 224079,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_PIT02",
+        "P1_LCV01D",
+        "P2_SCO"
+      ]
+    },
+    {
+      "snapshot": 1449,
+      "end": 224091,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_FCV02D",
+        "P1_PIT01",
+        "P1_PIT02",
+        "P2_SCO"
+      ]
+    },
+    {
+      "snapshot": 1525,
+      "end": 236551,
+      "variant": "fusion",
+      "seed": 13,
+      "parsed": true,
+      "llm_order": [
+        "P1_PCV01D",
+        "P1_PP04D",
+        "P1_FCV03D",
+        "P1_LCV01D",
+        "P1_TIT01"
+      ]
+    }
+  ]
+}

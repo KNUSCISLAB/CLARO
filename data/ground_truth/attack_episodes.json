@@ -1,0 +1,418 @@
+[
+ {
+  "attack_id": "A101",
+  "raw_start": 1503,
+  "raw_stop": 1741,
+  "start": "2022-08-12 16:25:04",
+  "end_inclusive": "2022-08-12 16:29:01",
+  "target_controllers": "P1-PC-SP1"
+ },
+ {
+  "attack_id": "A102",
+  "raw_start": 5700,
+  "raw_stop": 5899,
+  "start": "2022-08-12 17:35:01",
+  "end_inclusive": "2022-08-12 17:38:19",
+  "target_controllers": "P1-PC-SP1PV1"
+ },
+ {
+  "attack_id": "A103",
+  "raw_start": 9136,
+  "raw_stop": 9293,
+  "start": "2022-08-12 18:32:17",
+  "end_inclusive": "2022-08-12 18:34:53",
+  "target_controllers": "P1-PC-CO1"
+ },
+ {
+  "attack_id": "A104",
+  "raw_start": 12063,
+  "raw_stop": 12228,
+  "start": "2022-08-12 19:21:04",
+  "end_inclusive": "2022-08-12 19:23:48",
+  "target_controllers": "P1-PC-CO1PV1"
+ },
+ {
+  "attack_id": "A105",
+  "raw_start": 16980,
+  "raw_stop": 17142,
+  "start": "2022-08-12 20:43:01",
+  "end_inclusive": "2022-08-12 20:45:42",
+  "target_controllers": "P1-PC-CO1-ST"
+ },
+ {
+  "attack_id": "A106",
+  "raw_start": 20160,
+  "raw_stop": 20358,
+  "start": "2022-08-12 21:36:01",
+  "end_inclusive": "2022-08-12 21:39:18",
+  "target_controllers": "P1-PC-SP1PV1PV2"
+ },
+ {
+  "attack_id": "A107",
+  "raw_start": 24420,
+  "raw_stop": 25025,
+  "start": "2022-08-12 22:47:01",
+  "end_inclusive": "2022-08-12 22:57:05",
+  "target_controllers": "P1-PC-SP1-LT"
+ },
+ {
+  "attack_id": "A108",
+  "raw_start": 27314,
+  "raw_stop": 27411,
+  "start": "2022-08-12 23:35:15",
+  "end_inclusive": "2022-08-12 23:36:51",
+  "target_controllers": "P1-FC-SP1"
+ },
+ {
+  "attack_id": "A109",
+  "raw_start": 30303,
+  "raw_stop": 30434,
+  "start": "2022-08-13 00:25:04",
+  "end_inclusive": "2022-08-13 00:27:14",
+  "target_controllers": "P1-FC-SP1PV1"
+ },
+ {
+  "attack_id": "A110",
+  "raw_start": 34448,
+  "raw_stop": 34504,
+  "start": "2022-08-13 01:34:09",
+  "end_inclusive": "2022-08-13 01:35:04",
+  "target_controllers": "P1-FC-CO1"
+ },
+ {
+  "attack_id": "A111",
+  "raw_start": 37263,
+  "raw_stop": 37395,
+  "start": "2022-08-13 02:21:04",
+  "end_inclusive": "2022-08-13 02:23:15",
+  "target_controllers": "P1-FC-CO1PV1"
+ },
+ {
+  "attack_id": "A112",
+  "raw_start": 41162,
+  "raw_stop": 41241,
+  "start": "2022-08-13 03:26:03",
+  "end_inclusive": "2022-08-13 03:27:21",
+  "target_controllers": "P1-FC-CO1-ST"
+ },
+ {
+  "attack_id": "A113",
+  "raw_start": 45781,
+  "raw_stop": 45915,
+  "start": "2022-08-13 04:43:02",
+  "end_inclusive": "2022-08-13 04:45:15",
+  "target_controllers": "P1-FC-SP1PV1PV2"
+ },
+ {
+  "attack_id": "A114",
+  "raw_start": 49207,
+  "raw_stop": 49835,
+  "start": "2022-08-13 05:40:08",
+  "end_inclusive": "2022-08-13 05:50:35",
+  "target_controllers": "P1-FC-SP1-LT"
+ },
+ {
+  "attack_id": "A201",
+  "raw_start": 59225,
+  "raw_stop": 59358,
+  "start": "2022-08-17 01:27:00",
+  "end_inclusive": "2022-08-17 01:29:00",
+  "target_controllers": "P1-LC-SP1"
+ },
+ {
+  "attack_id": "A202",
+  "raw_start": 67021,
+  "raw_stop": 67153,
+  "start": "2022-08-17 03:37:00",
+  "end_inclusive": "2022-08-17 03:39:00",
+  "target_controllers": "P1-LC-SP1PV1"
+ },
+ {
+  "attack_id": "A203",
+  "raw_start": 69662,
+  "raw_stop": 69731,
+  "start": "2022-08-17 04:21:00",
+  "end_inclusive": "2022-08-17 04:22:00",
+  "target_controllers": "P1-LC-CO1"
+ },
+ {
+  "attack_id": "A204",
+  "raw_start": 74761,
+  "raw_stop": 74884,
+  "start": "2022-08-17 05:46:00",
+  "end_inclusive": "2022-08-17 05:48:00",
+  "target_controllers": "P1-LC-CO1PV1"
+ },
+ {
+  "attack_id": "A205",
+  "raw_start": 76864,
+  "raw_stop": 76950,
+  "start": "2022-08-17 06:21:00",
+  "end_inclusive": "2022-08-17 06:22:00",
+  "target_controllers": "P1-LC-CO1-ST"
+ },
+ {
+  "attack_id": "A206",
+  "raw_start": 84960,
+  "raw_stop": 85157,
+  "start": "2022-08-17 08:36:00",
+  "end_inclusive": "2022-08-17 08:39:00",
+  "target_controllers": "P1-PC-SP1PV1PV2"
+ },
+ {
+  "attack_id": "A207",
+  "raw_start": 88923,
+  "raw_stop": 89538,
+  "start": "2022-08-17 09:42:00",
+  "end_inclusive": "2022-08-17 09:52:00",
+  "target_controllers": "P1-LC-CO1-LT"
+ },
+ {
+  "attack_id": "A208",
+  "raw_start": 92161,
+  "raw_stop": 92295,
+  "start": "2022-08-17 10:36:00",
+  "end_inclusive": "2022-08-17 10:38:00",
+  "target_controllers": "P1-LC-CO1PV1PV2"
+ },
+ {
+  "attack_id": "A209",
+  "raw_start": 95704,
+  "raw_stop": 95790,
+  "start": "2022-08-17 11:35:00",
+  "end_inclusive": "2022-08-17 11:36:00",
+  "target_controllers": "P1-CC-CO1"
+ },
+ {
+  "attack_id": "A210",
+  "raw_start": 98704,
+  "raw_stop": 98793,
+  "start": "2022-08-17 12:25:00",
+  "end_inclusive": "2022-08-17 12:26:00",
+  "target_controllers": "P1-CC-CO1"
+ },
+ {
+  "attack_id": "A211",
+  "raw_start": 103624,
+  "raw_stop": 103829,
+  "start": "2022-08-17 13:47:00",
+  "end_inclusive": "2022-08-17 13:50:00",
+  "target_controllers": "P1-CC-CO1PV1"
+ },
+ {
+  "attack_id": "A212",
+  "raw_start": 105903,
+  "raw_stop": 106031,
+  "start": "2022-08-17 14:25:00",
+  "end_inclusive": "2022-08-17 14:27:00",
+  "target_controllers": "P1-CC-CO1-ST"
+ },
+ {
+  "attack_id": "A213",
+  "raw_start": 108780,
+  "raw_stop": 109320,
+  "start": "2022-08-17 15:13:00",
+  "end_inclusive": "2022-08-17 15:22:00",
+  "target_controllers": "P1-CC-SP1-LT"
+ },
+ {
+  "attack_id": "A214",
+  "raw_start": 117243,
+  "raw_stop": 117305,
+  "start": "2022-08-17 17:34:00",
+  "end_inclusive": "2022-08-17 17:35:00",
+  "target_controllers": "P1-TC-CO1"
+ },
+ {
+  "attack_id": "A215",
+  "raw_start": 119763,
+  "raw_stop": 119911,
+  "start": "2022-08-17 18:16:00",
+  "end_inclusive": "2022-08-17 18:18:00",
+  "target_controllers": "P1-TC-CO1PV1"
+ },
+ {
+  "attack_id": "A216",
+  "raw_start": 124802,
+  "raw_stop": 124898,
+  "start": "2022-08-17 19:40:00",
+  "end_inclusive": "2022-08-17 19:41:00",
+  "target_controllers": "P1-TC-CO1-ST"
+ },
+ {
+  "attack_id": "A217",
+  "raw_start": 126722,
+  "raw_stop": 127228,
+  "start": "2022-08-17 20:12:00",
+  "end_inclusive": "2022-08-17 20:20:00",
+  "target_controllers": "P1-TC-SP1-LT"
+ },
+ {
+  "attack_id": "A218",
+  "raw_start": 135660,
+  "raw_stop": 135875,
+  "start": "2022-08-17 22:41:00",
+  "end_inclusive": "2022-08-17 22:44:00",
+  "target_controllers": "P1-PC-CO1-ST"
+ },
+ {
+  "attack_id": "A219",
+  "raw_start": 139083,
+  "raw_stop": 139215,
+  "start": "2022-08-17 23:38:00",
+  "end_inclusive": "2022-08-17 23:40:00",
+  "target_controllers": "P1-FC-CO1-ST"
+ },
+ {
+  "attack_id": "A220",
+  "raw_start": 190082,
+  "raw_stop": 190214,
+  "start": "2022-08-18 13:48:00",
+  "end_inclusive": "2022-08-18 13:50:00",
+  "target_controllers": "P1-LC-CO-AVALGEN"
+ },
+ {
+  "attack_id": "A221",
+  "raw_start": 194331,
+  "raw_stop": 194414,
+  "start": "2022-08-18 14:58:00",
+  "end_inclusive": "2022-08-18 15:00:00",
+  "target_controllers": "P1-HC-SP-LOWMON"
+ },
+ {
+  "attack_id": "A222",
+  "raw_start": 199219,
+  "raw_stop": 199431,
+  "start": "2022-08-18 16:20:00",
+  "end_inclusive": "2022-08-18 16:23:00",
+  "target_controllers": "P1-PC-CO-AVALGEN"
+ },
+ {
+  "attack_id": "A223",
+  "raw_start": 203889,
+  "raw_stop": 203969,
+  "start": "2022-08-18 17:38:00",
+  "end_inclusive": "2022-08-18 17:39:00",
+  "target_controllers": "P1-CC-CO-FUNCTION"
+ },
+ {
+  "attack_id": "A224",
+  "raw_start": 207905,
+  "raw_stop": 208013,
+  "start": "2022-08-18 18:45:00",
+  "end_inclusive": "2022-08-18 18:46:00",
+  "target_controllers": "P1-LC-SP1+P2-SC-SP1"
+ },
+ {
+  "attack_id": "A225",
+  "raw_start": 210060,
+  "raw_stop": 210121,
+  "start": "2022-08-18 19:21:00",
+  "end_inclusive": "2022-08-18 19:22:00",
+  "target_controllers": "P1-LC-CO1+P2-TC-SP1"
+ },
+ {
+  "attack_id": "A226",
+  "raw_start": 214328,
+  "raw_stop": 214447,
+  "start": "2022-08-18 20:32:00",
+  "end_inclusive": "2022-08-18 20:34:00",
+  "target_controllers": "P1-PC-CO1+P1-FC-CO1"
+ },
+ {
+  "attack_id": "A227",
+  "raw_start": 218461,
+  "raw_stop": 218594,
+  "start": "2022-08-18 21:41:00",
+  "end_inclusive": "2022-08-18 21:43:00",
+  "target_controllers": "P1-FC-SP1PV1+P1-LC-SP1"
+ },
+ {
+  "attack_id": "A228",
+  "raw_start": 224100,
+  "raw_stop": 224256,
+  "start": "2022-08-18 23:15:00",
+  "end_inclusive": "2022-08-18 23:17:00",
+  "target_controllers": "P1-PC-CO1PV1+P2-SC-CO1PV1"
+ },
+ {
+  "attack_id": "A229",
+  "raw_start": 231783,
+  "raw_stop": 231899,
+  "start": "2022-08-19 01:23:00",
+  "end_inclusive": "2022-08-19 01:24:00",
+  "target_controllers": "P1-TC-SP1+P1-PC-SP1"
+ },
+ {
+  "attack_id": "A230",
+  "raw_start": 236580,
+  "raw_stop": 236735,
+  "start": "2022-08-19 02:43:00",
+  "end_inclusive": "2022-08-19 02:45:00",
+  "target_controllers": "P1-TC-CO1+P1-PC-SP1PV1"
+ },
+ {
+  "attack_id": "A231",
+  "raw_start": 243240,
+  "raw_stop": 243336,
+  "start": "2022-08-19 04:34:00",
+  "end_inclusive": "2022-08-19 04:35:00",
+  "target_controllers": "P1-FC-SP1+P3-LC-CO1"
+ },
+ {
+  "attack_id": "A232",
+  "raw_start": 245641,
+  "raw_stop": 245795,
+  "start": "2022-08-19 05:14:00",
+  "end_inclusive": "2022-08-19 05:16:00",
+  "target_controllers": "P1-TC-SP1+P2-SC-SP1PV1"
+ },
+ {
+  "attack_id": "A233",
+  "raw_start": 251160,
+  "raw_stop": 253212,
+  "start": "2022-08-19 06:46:00",
+  "end_inclusive": "2022-08-19 07:20:00",
+  "target_controllers": "P1-LC-CO1PV1-LT+P2-TC-SP2-LT"
+ },
+ {
+  "attack_id": "A234",
+  "raw_start": 257040,
+  "raw_stop": 257570,
+  "start": "2022-08-19 08:24:00",
+  "end_inclusive": "2022-08-19 08:32:00",
+  "target_controllers": "P1-CC-SP1-LT"
+ },
+ {
+  "attack_id": "A235",
+  "raw_start": 260852,
+  "raw_stop": 260939,
+  "start": "2022-08-19 09:27:00",
+  "end_inclusive": "2022-08-19 09:28:00",
+  "target_controllers": "P1-TC-PV_FUNCTION1"
+ },
+ {
+  "attack_id": "A236",
+  "raw_start": 264839,
+  "raw_stop": 264959,
+  "start": "2022-08-19 10:34:00",
+  "end_inclusive": "2022-08-19 10:35:00",
+  "target_controllers": "P1-TC-PV_FUNCTION2"
+ },
+ {
+  "attack_id": "A237",
+  "raw_start": 278279,
+  "raw_stop": 278469,
+  "start": "2022-08-19 14:18:00",
+  "end_inclusive": "2022-08-19 14:21:00",
+  "target_controllers": "P1-PC-CO_FUNCTION"
+ },
+ {
+  "attack_id": "A238",
+  "raw_start": 280259,
+  "raw_stop": 280382,
+  "start": "2022-08-19 14:51:00",
+  "end_inclusive": "2022-08-19 14:53:00",
+  "target_controllers": "P1-LC-CO-FUNCTION"
+ }
+]

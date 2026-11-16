@@ -1,0 +1,10 @@
+# HAI data are not redistributed
+data/raw/
+data/processed/
+*.npy
+!data/graphs/*.npy
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store

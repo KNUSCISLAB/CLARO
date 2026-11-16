@@ -1,0 +1,1999 @@
+{
+ "interpretation": "documented relations support an edge; absence of documentation does not make an edge wrong; controller level is direction-agnostic",
+ "source_pdf_sha256": "0668345c4e80331b918fe17c81f8f363b13bd22886831d286e761bc62b71a556",
+ "relations": [
+  {
+   "source": "P1_FCV01D",
+   "target": "P1_FCV01Z",
+   "level": "manual",
+   "evidence": [
+    "p.12 valve command -> position feedback"
+   ]
+  },
+  {
+   "source": "P1_FCV01D",
+   "target": "P1_FCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV01D",
+   "target": "P1_FT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV01D",
+   "target": "P1_FT01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV01D",
+   "target": "P1_FT02",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "p.8 P1-TC cascade flow"
+   ]
+  },
+  {
+   "source": "P1_FCV01D",
+   "target": "P1_FT02Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV01D",
+   "target": "P1_TIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "p.7 P1-TC loop"
+   ]
+  },
+  {
+   "source": "P1_FCV01D",
+   "target": "P4_ST_GOV",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV01D",
+   "target": "x1003_10_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV01D",
+   "target": "x1003_18_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV01D",
+   "target": "x1003_24_SUM_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV02D",
+   "target": "P1_FCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV02D",
+   "target": "P1_FCV02Z",
+   "level": "manual",
+   "evidence": [
+    "p.12 valve command -> position feedback"
+   ]
+  },
+  {
+   "source": "P1_FCV02D",
+   "target": "P1_FT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV02D",
+   "target": "P1_FT01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV02D",
+   "target": "P1_FT02",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "p.8 P1-TC cascade flow"
+   ]
+  },
+  {
+   "source": "P1_FCV02D",
+   "target": "P1_FT02Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV02D",
+   "target": "P1_TIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "p.7 P1-TC loop"
+   ]
+  },
+  {
+   "source": "P1_FCV02D",
+   "target": "P4_ST_GOV",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV02D",
+   "target": "x1003_10_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV02D",
+   "target": "x1003_18_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV02D",
+   "target": "x1003_24_SUM_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV03D",
+   "target": "P1_FCV03Z",
+   "level": "manual",
+   "evidence": [
+    "p.12 valve command -> position feedback"
+   ]
+  },
+  {
+   "source": "P1_FCV03D",
+   "target": "P1_FT03",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "p.7 P1-FC loop"
+   ]
+  },
+  {
+   "source": "P1_FCV03D",
+   "target": "P1_FT03Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV03D",
+   "target": "P1_LCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV03D",
+   "target": "P1_LCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV03D",
+   "target": "P1_LIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "p.7 P1-LC feed-forward disturbance"
+   ]
+  },
+  {
+   "source": "P1_FCV03D",
+   "target": "x1002_07_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FCV03D",
+   "target": "x1002_08_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FT01",
+   "target": "P1_FCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT01",
+   "target": "P1_FCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT01",
+   "target": "P1_FT01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "p.12 conversion"
+   ]
+  },
+  {
+   "source": "P1_FT01",
+   "target": "x1003_10_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT01",
+   "target": "x1003_18_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT01",
+   "target": "x1003_24_SUM_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT01Z",
+   "target": "P1_FCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT01Z",
+   "target": "P1_FCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT01Z",
+   "target": "P1_FT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT01Z",
+   "target": "x1003_10_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT01Z",
+   "target": "x1003_18_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT01Z",
+   "target": "x1003_24_SUM_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT02",
+   "target": "P1_FCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT02",
+   "target": "P1_FCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT02",
+   "target": "P1_FT02Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "p.12 conversion"
+   ]
+  },
+  {
+   "source": "P1_FT02",
+   "target": "x1003_10_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT02",
+   "target": "x1003_18_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT02",
+   "target": "x1003_24_SUM_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT02Z",
+   "target": "P1_FCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT02Z",
+   "target": "P1_FCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT02Z",
+   "target": "P1_FT02",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT02Z",
+   "target": "x1003_10_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT02Z",
+   "target": "x1003_18_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT02Z",
+   "target": "x1003_24_SUM_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_FT03",
+   "target": "P1_FCV03D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FT03",
+   "target": "P1_FT03Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "p.12 conversion"
+   ]
+  },
+  {
+   "source": "P1_FT03",
+   "target": "P1_LCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FT03",
+   "target": "P1_LCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FT03",
+   "target": "x1002_07_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FT03",
+   "target": "x1002_08_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FT03Z",
+   "target": "P1_FCV03D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FT03Z",
+   "target": "P1_FT03",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FT03Z",
+   "target": "P1_LCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FT03Z",
+   "target": "P1_LCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FT03Z",
+   "target": "x1002_07_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_FT03Z",
+   "target": "x1002_08_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LCV01D",
+   "target": "P1_FCV03D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LCV01D",
+   "target": "P1_FT03",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LCV01D",
+   "target": "P1_FT03Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LCV01D",
+   "target": "P1_LCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json",
+    "p.12 valve command -> position feedback"
+   ]
+  },
+  {
+   "source": "P1_LCV01D",
+   "target": "P1_LIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "p.7 P1-LC loop"
+   ]
+  },
+  {
+   "source": "P1_LCV01D",
+   "target": "x1002_07_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LCV01D",
+   "target": "x1002_08_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LCV01Z",
+   "target": "P1_FCV03D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LCV01Z",
+   "target": "P1_FT03",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LCV01Z",
+   "target": "P1_FT03Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LCV01Z",
+   "target": "P1_LCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LCV01Z",
+   "target": "P1_LIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LCV01Z",
+   "target": "x1002_07_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LCV01Z",
+   "target": "x1002_08_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LIT01",
+   "target": "P1_FCV03D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LIT01",
+   "target": "P1_LCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LIT01",
+   "target": "P1_LCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LIT01",
+   "target": "x1002_07_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_LIT01",
+   "target": "x1002_08_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV01D",
+   "target": "P1_PCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json",
+    "p.12 valve command -> position feedback"
+   ]
+  },
+  {
+   "source": "P1_PCV01D",
+   "target": "P1_PCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV01D",
+   "target": "P1_PIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "p.7 P1-PC loop"
+   ]
+  },
+  {
+   "source": "P1_PCV01D",
+   "target": "P4_ST_GOV",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV01D",
+   "target": "x1001_05_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV01D",
+   "target": "x1001_15_ASSIGN_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV01Z",
+   "target": "P1_PCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV01Z",
+   "target": "P1_PCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV01Z",
+   "target": "P1_PIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV01Z",
+   "target": "P4_ST_GOV",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV01Z",
+   "target": "x1001_05_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV01Z",
+   "target": "x1001_15_ASSIGN_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV02D",
+   "target": "P1_PCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV02D",
+   "target": "P1_PCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV02D",
+   "target": "P1_PCV02Z",
+   "level": "manual",
+   "evidence": [
+    "p.12 valve command -> position feedback"
+   ]
+  },
+  {
+   "source": "P1_PCV02D",
+   "target": "P1_PIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "p.7 P1-PC loop"
+   ]
+  },
+  {
+   "source": "P1_PCV02D",
+   "target": "P4_ST_GOV",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV02D",
+   "target": "x1001_05_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PCV02D",
+   "target": "x1001_15_ASSIGN_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PIT01",
+   "target": "P1_PCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PIT01",
+   "target": "P1_PCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PIT01",
+   "target": "P1_PCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PIT01",
+   "target": "P4_ST_PT01",
+   "level": "manual",
+   "evidence": [
+    "p.5 boiler pressure -> STM steam pressure"
+   ]
+  },
+  {
+   "source": "P1_PIT01",
+   "target": "x1001_05_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PIT01",
+   "target": "x1001_15_ASSIGN_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P1_PP04",
+   "target": "P1_PP04SP",
+   "level": "controller",
+   "evidence": [
+    "dcs_1020h.json",
+    "dcs_1020h.json"
+   ]
+  },
+  {
+   "source": "P1_PP04",
+   "target": "P1_TIT03",
+   "level": "controller",
+   "evidence": [
+    "dcs_1020h.json",
+    "p.8 P1-CC cooling effect"
+   ]
+  },
+  {
+   "source": "P1_PP04SP",
+   "target": "P1_PP04",
+   "level": "controller",
+   "evidence": [
+    "dcs_1020h.json",
+    "dcs_1020h.json",
+    "p.8 P1-CC"
+   ]
+  },
+  {
+   "source": "P1_PP04SP",
+   "target": "P1_TIT03",
+   "level": "controller",
+   "evidence": [
+    "dcs_1020h.json"
+   ]
+  },
+  {
+   "source": "P1_TIT01",
+   "target": "P1_FCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_TIT01",
+   "target": "P1_FCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_TIT01",
+   "target": "P4_ST_TT01",
+   "level": "manual",
+   "evidence": [
+    "p.5 boiler temperature -> STM steam temperature"
+   ]
+  },
+  {
+   "source": "P1_TIT01",
+   "target": "x1003_10_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_TIT01",
+   "target": "x1003_18_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_TIT01",
+   "target": "x1003_24_SUM_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P1_TIT03",
+   "target": "P1_PP04",
+   "level": "controller",
+   "evidence": [
+    "dcs_1020h.json",
+    "p.8 P1-CC"
+   ]
+  },
+  {
+   "source": "P1_TIT03",
+   "target": "P1_PP04SP",
+   "level": "controller",
+   "evidence": [
+    "dcs_1020h.json"
+   ]
+  },
+  {
+   "source": "P2_AutoSD",
+   "target": "P2_SCO",
+   "level": "manual",
+   "evidence": [
+    "p.10 P2-SC setpoint"
+   ]
+  },
+  {
+   "source": "P2_SCO",
+   "target": "P2_SIT01",
+   "level": "manual",
+   "evidence": [
+    "p.10 P2-SC actuation"
+   ]
+  },
+  {
+   "source": "P2_SIT01",
+   "target": "P2_SCO",
+   "level": "manual",
+   "evidence": [
+    "p.10 P2-SC feedback"
+   ]
+  },
+  {
+   "source": "P3_LCP01D",
+   "target": "P3_FIT01",
+   "level": "manual",
+   "evidence": [
+    "p.6 pump drives inflow"
+   ]
+  },
+  {
+   "source": "P3_LCP01D",
+   "target": "P3_LIT01",
+   "level": "manual",
+   "evidence": [
+    "p.11 P3-LC actuation"
+   ]
+  },
+  {
+   "source": "P3_LCP01D",
+   "target": "P3_PIT01",
+   "level": "manual",
+   "evidence": [
+    "p.6 pump drives inflow pressure"
+   ]
+  },
+  {
+   "source": "P3_LCV01D",
+   "target": "P3_LIT01",
+   "level": "manual",
+   "evidence": [
+    "p.11 P3-LC actuation"
+   ]
+  },
+  {
+   "source": "P3_LIT01",
+   "target": "P3_LCP01D",
+   "level": "manual",
+   "evidence": [
+    "p.11 P3-LC"
+   ]
+  },
+  {
+   "source": "P3_LIT01",
+   "target": "P3_LCV01D",
+   "level": "manual",
+   "evidence": [
+    "p.11 P3-LC"
+   ]
+  },
+  {
+   "source": "P4_ST_FD",
+   "target": "P2_SCST",
+   "level": "manual",
+   "evidence": [
+    "p.14 SCST follows STM frequency change"
+   ]
+  },
+  {
+   "source": "P4_ST_GOV",
+   "target": "P1_FCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P4_ST_GOV",
+   "target": "P1_FCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P4_ST_GOV",
+   "target": "P1_PCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P4_ST_GOV",
+   "target": "P1_PCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P4_ST_GOV",
+   "target": "P1_PCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P4_ST_GOV",
+   "target": "x1001_05_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P4_ST_GOV",
+   "target": "x1001_15_ASSIGN_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "P4_ST_GOV",
+   "target": "x1003_10_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P4_ST_GOV",
+   "target": "x1003_18_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "P4_ST_GOV",
+   "target": "x1003_24_SUM_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1001_05_SETPOINT_OUT",
+   "target": "P1_PCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "x1001_05_SETPOINT_OUT",
+   "target": "P1_PCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "x1001_05_SETPOINT_OUT",
+   "target": "P1_PCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "x1001_05_SETPOINT_OUT",
+   "target": "P1_PIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "x1001_05_SETPOINT_OUT",
+   "target": "P4_ST_GOV",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "x1001_05_SETPOINT_OUT",
+   "target": "x1001_15_ASSIGN_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "x1001_15_ASSIGN_OUT",
+   "target": "P1_PCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "x1001_15_ASSIGN_OUT",
+   "target": "P1_PCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "x1001_15_ASSIGN_OUT",
+   "target": "P1_PCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "x1001_15_ASSIGN_OUT",
+   "target": "P1_PIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "x1001_15_ASSIGN_OUT",
+   "target": "P4_ST_GOV",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "x1001_15_ASSIGN_OUT",
+   "target": "x1001_05_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1001h.json",
+    "dcs_1001h.json"
+   ]
+  },
+  {
+   "source": "x1002_07_SETPOINT_OUT",
+   "target": "P1_FCV03D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_07_SETPOINT_OUT",
+   "target": "P1_FT03",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_07_SETPOINT_OUT",
+   "target": "P1_FT03Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_07_SETPOINT_OUT",
+   "target": "P1_LCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_07_SETPOINT_OUT",
+   "target": "P1_LCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_07_SETPOINT_OUT",
+   "target": "P1_LIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_07_SETPOINT_OUT",
+   "target": "x1002_08_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_08_SETPOINT_OUT",
+   "target": "P1_FCV03D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_08_SETPOINT_OUT",
+   "target": "P1_FT03",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_08_SETPOINT_OUT",
+   "target": "P1_FT03Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_08_SETPOINT_OUT",
+   "target": "P1_LCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_08_SETPOINT_OUT",
+   "target": "P1_LCV01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_08_SETPOINT_OUT",
+   "target": "P1_LIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1002_08_SETPOINT_OUT",
+   "target": "x1002_07_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1002h.json",
+    "dcs_1002h.json"
+   ]
+  },
+  {
+   "source": "x1003_10_SETPOINT_OUT",
+   "target": "P1_FCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_10_SETPOINT_OUT",
+   "target": "P1_FCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_10_SETPOINT_OUT",
+   "target": "P1_FT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_10_SETPOINT_OUT",
+   "target": "P1_FT01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_10_SETPOINT_OUT",
+   "target": "P1_FT02",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_10_SETPOINT_OUT",
+   "target": "P1_FT02Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_10_SETPOINT_OUT",
+   "target": "P1_TIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_10_SETPOINT_OUT",
+   "target": "P4_ST_GOV",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_10_SETPOINT_OUT",
+   "target": "x1003_18_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_10_SETPOINT_OUT",
+   "target": "x1003_24_SUM_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_18_SETPOINT_OUT",
+   "target": "P1_FCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_18_SETPOINT_OUT",
+   "target": "P1_FCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_18_SETPOINT_OUT",
+   "target": "P1_FT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_18_SETPOINT_OUT",
+   "target": "P1_FT01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_18_SETPOINT_OUT",
+   "target": "P1_FT02",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_18_SETPOINT_OUT",
+   "target": "P1_FT02Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_18_SETPOINT_OUT",
+   "target": "P1_TIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_18_SETPOINT_OUT",
+   "target": "P4_ST_GOV",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_18_SETPOINT_OUT",
+   "target": "x1003_10_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_18_SETPOINT_OUT",
+   "target": "x1003_24_SUM_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_24_SUM_OUT",
+   "target": "P1_FCV01D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_24_SUM_OUT",
+   "target": "P1_FCV02D",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_24_SUM_OUT",
+   "target": "P1_FT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_24_SUM_OUT",
+   "target": "P1_FT01Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_24_SUM_OUT",
+   "target": "P1_FT02",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_24_SUM_OUT",
+   "target": "P1_FT02Z",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_24_SUM_OUT",
+   "target": "P1_TIT01",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_24_SUM_OUT",
+   "target": "P4_ST_GOV",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_24_SUM_OUT",
+   "target": "x1003_10_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  },
+  {
+   "source": "x1003_24_SUM_OUT",
+   "target": "x1003_18_SETPOINT_OUT",
+   "level": "controller",
+   "evidence": [
+    "dcs_1003h.json",
+    "dcs_1003h.json"
+   ]
+  }
+ ],
+ "coarse_relations": [
+  {
+   "source": "P3_FIT01",
+   "target": "P4_HT_FD",
+   "level": "coarse",
+   "evidence": [
+    "p.6 P3 flow/pressure/level transmitted to HTM"
+   ]
+  },
+  {
+   "source": "P3_FIT01",
+   "target": "P4_HT_PO",
+   "level": "coarse",
+   "evidence": [
+    "p.6 P3 flow/pressure/level transmitted to HTM"
+   ]
+  },
+  {
+   "source": "P3_FIT01",
+   "target": "P4_HT_PS",
+   "level": "coarse",
+   "evidence": [
+    "p.6 P3 flow/pressure/level transmitted to HTM"
+   ]
+  },
+  {
+   "source": "P3_LIT01",
+   "target": "P4_HT_FD",
+   "level": "coarse",
+   "evidence": [
+    "p.6 P3 flow/pressure/level transmitted to HTM"
+   ]
+  },
+  {
+   "source": "P3_LIT01",
+   "target": "P4_HT_PO",
+   "level": "coarse",
+   "evidence": [
+    "p.6 P3 flow/pressure/level transmitted to HTM"
+   ]
+  },
+  {
+   "source": "P3_LIT01",
+   "target": "P4_HT_PS",
+   "level": "coarse",
+   "evidence": [
+    "p.6 P3 flow/pressure/level transmitted to HTM"
+   ]
+  },
+  {
+   "source": "P3_PIT01",
+   "target": "P4_HT_FD",
+   "level": "coarse",
+   "evidence": [
+    "p.6 P3 flow/pressure/level transmitted to HTM"
+   ]
+  },
+  {
+   "source": "P3_PIT01",
+   "target": "P4_HT_PO",
+   "level": "coarse",
+   "evidence": [
+    "p.6 P3 flow/pressure/level transmitted to HTM"
+   ]
+  },
+  {
+   "source": "P3_PIT01",
+   "target": "P4_HT_PS",
+   "level": "coarse",
+   "evidence": [
+    "p.6 P3 flow/pressure/level transmitted to HTM"
+   ]
+  },
+  {
+   "source": "P4_HT_FD",
+   "target": "P3_LCP01D",
+   "level": "coarse",
+   "evidence": [
+    "p.11 HTM discharge/pumping demands drive P3-LC"
+   ]
+  },
+  {
+   "source": "P4_HT_FD",
+   "target": "P3_LCV01D",
+   "level": "coarse",
+   "evidence": [
+    "p.11 HTM discharge/pumping demands drive P3-LC"
+   ]
+  },
+  {
+   "source": "P4_HT_PO",
+   "target": "P3_LCP01D",
+   "level": "coarse",
+   "evidence": [
+    "p.11 HTM discharge/pumping demands drive P3-LC"
+   ]
+  },
+  {
+   "source": "P4_HT_PO",
+   "target": "P3_LCV01D",
+   "level": "coarse",
+   "evidence": [
+    "p.11 HTM discharge/pumping demands drive P3-LC"
+   ]
+  },
+  {
+   "source": "P4_HT_PS",
+   "target": "P3_LCP01D",
+   "level": "coarse",
+   "evidence": [
+    "p.11 HTM discharge/pumping demands drive P3-LC"
+   ]
+  },
+  {
+   "source": "P4_HT_PS",
+   "target": "P3_LCV01D",
+   "level": "coarse",
+   "evidence": [
+    "p.11 HTM discharge/pumping demands drive P3-LC"
+   ]
+  },
+  {
+   "source": "P4_ST_FD",
+   "target": "P2_AutoSD",
+   "level": "coarse",
+   "evidence": [
+    "p.10 STM generates P2 speed-setpoint trajectories"
+   ]
+  },
+  {
+   "source": "P4_ST_GOV",
+   "target": "P2_AutoSD",
+   "level": "coarse",
+   "evidence": [
+    "p.10 STM generates P2 speed-setpoint trajectories"
+   ]
+  },
+  {
+   "source": "P4_ST_LD",
+   "target": "P2_AutoSD",
+   "level": "coarse",
+   "evidence": [
+    "p.10 STM generates P2 speed-setpoint trajectories"
+   ]
+  },
+  {
+   "source": "P4_ST_PO",
+   "target": "P2_AutoSD",
+   "level": "coarse",
+   "evidence": [
+    "p.10 STM generates P2 speed-setpoint trajectories"
+   ]
+  },
+  {
+   "source": "P4_ST_PS",
+   "target": "P2_AutoSD",
+   "level": "coarse",
+   "evidence": [
+    "p.10 STM generates P2 speed-setpoint trajectories"
+   ]
+  },
+  {
+   "source": "P4_ST_PT01",
+   "target": "P2_AutoSD",
+   "level": "coarse",
+   "evidence": [
+    "p.10 STM generates P2 speed-setpoint trajectories"
+   ]
+  },
+  {
+   "source": "P4_ST_TT01",
+   "target": "P2_AutoSD",
+   "level": "coarse",
+   "evidence": [
+    "p.10 STM generates P2 speed-setpoint trajectories"
+   ]
+  },
+  {
+   "source": "P1_LIT01",
+   "target": "P4_ST_FD",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_LIT01",
+   "target": "P4_ST_GOV",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_LIT01",
+   "target": "P4_ST_LD",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_LIT01",
+   "target": "P4_ST_PO",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_LIT01",
+   "target": "P4_ST_PS",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_LIT01",
+   "target": "P4_ST_PT01",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_LIT01",
+   "target": "P4_ST_TT01",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_PIT01",
+   "target": "P4_ST_FD",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_PIT01",
+   "target": "P4_ST_GOV",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_PIT01",
+   "target": "P4_ST_LD",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_PIT01",
+   "target": "P4_ST_PO",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_PIT01",
+   "target": "P4_ST_PS",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_PIT01",
+   "target": "P4_ST_TT01",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_TIT01",
+   "target": "P4_ST_FD",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_TIT01",
+   "target": "P4_ST_GOV",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_TIT01",
+   "target": "P4_ST_LD",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_TIT01",
+   "target": "P4_ST_PO",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_TIT01",
+   "target": "P4_ST_PS",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  },
+  {
+   "source": "P1_TIT01",
+   "target": "P4_ST_PT01",
+   "level": "coarse",
+   "evidence": [
+    "p.4 boiler pressure/temperature/level sent to HIL"
+   ]
+  }
+ ]
+}

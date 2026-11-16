@@ -1,0 +1,2102 @@
+[
+  {
+    "snapshot": 13,
+    "raw_endpoint": 1534,
+    "channel": "P1_PCV01D",
+    "reason": "Highest CLARO score and significant residuals for a valve command in the P1-PC loop."
+  },
+  {
+    "snapshot": 13,
+    "raw_endpoint": 1534,
+    "channel": "P1_FCV01D",
+    "reason": "High CLARO score and residual for a position command used by the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 13,
+    "raw_endpoint": 1534,
+    "channel": "P1_LCV01D",
+    "reason": "Significant residuals for a valve command in the P1-LC level control loop."
+  },
+  {
+    "snapshot": 13,
+    "raw_endpoint": 1534,
+    "channel": "P1_PIT01",
+    "reason": "High 5-s residual for a measurement that serves as the primary input for the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 13,
+    "raw_endpoint": 1534,
+    "channel": "P1_FT01",
+    "reason": "Significant residuals for a flow measurement, which is converted to P1_FT01Z."
+  },
+  {
+    "snapshot": 14,
+    "raw_endpoint": 1540,
+    "channel": "P1_PCV01D",
+    "reason": "Highest residuals and CLARO score for a command signal in the P1-PC loop."
+  },
+  {
+    "snapshot": 14,
+    "raw_endpoint": 1540,
+    "channel": "P1_FCV01D",
+    "reason": "High residual for a valve command in the P1-TC cascade control loop."
+  },
+  {
+    "snapshot": 14,
+    "raw_endpoint": 1540,
+    "channel": "P1_PIT01",
+    "reason": "Significant residuals for the primary measurement used by the P1-PC control loop to drive PCV01D/PCV02D."
+  },
+  {
+    "snapshot": 14,
+    "raw_endpoint": 1540,
+    "channel": "P1_FT02",
+    "reason": "High residual for a flow measurement that is part of the P1-TC cascade loop with FCV01D/FCV02D."
+  },
+  {
+    "snapshot": 14,
+    "raw_endpoint": 1540,
+    "channel": "P1_FT01",
+    "reason": "Significant residuals for a measured flowrate in the boiler subsystem."
+  },
+  {
+    "snapshot": 15,
+    "raw_endpoint": 1552,
+    "channel": "P1_PCV01D",
+    "reason": "Highest CLARO score and residuals, and it is a command signal for the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 15,
+    "raw_endpoint": 1552,
+    "channel": "P1_PIT01",
+    "reason": "High residuals and serves as the primary measurement (PIT01) for the P1-PC control loop."
+  },
+  {
+    "snapshot": 15,
+    "raw_endpoint": 1552,
+    "channel": "P1_PCV01Z",
+    "reason": "Significant residuals and represents the measured position of valve PCV01D."
+  },
+  {
+    "snapshot": 15,
+    "raw_endpoint": 1552,
+    "channel": "P1_FT01",
+    "reason": "High residuals, though it is a measurement that may respond to pressure changes in P1."
+  },
+  {
+    "snapshot": 15,
+    "raw_endpoint": 1552,
+    "channel": "P1_FCV01D",
+    "reason": "Moderate residuals and is a command signal for the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 42,
+    "raw_endpoint": 5736,
+    "channel": "P1_PCV01D",
+    "reason": "Highest CLARO score and residuals, acting as a direct command for the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 42,
+    "raw_endpoint": 5736,
+    "channel": "P1_FCV01Z",
+    "reason": "High residual in a measured position that should follow FCV01D commands via the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 42,
+    "raw_endpoint": 5736,
+    "channel": "P1_PIT01",
+    "reason": "Significant residuals in the primary measurement for the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 42,
+    "raw_endpoint": 5736,
+    "channel": "P1_PCV01Z",
+    "reason": "High 5-s residual indicating a discrepancy between the command P1_PCV01D and its measured position."
+  },
+  {
+    "snapshot": 42,
+    "raw_endpoint": 5736,
+    "channel": "P1_FT02",
+    "reason": "Elevated residuals in the flow measurement used as the cascade variable for the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 43,
+    "raw_endpoint": 5750,
+    "channel": "P1_PCV01D",
+    "reason": "Highest residuals and CLARO score for a command signal, which typically drives the process rather than responding to it."
+  },
+  {
+    "snapshot": 43,
+    "raw_endpoint": 5750,
+    "channel": "P1_FCV01Z",
+    "reason": "High residual for a measured position that does not have a direct control loop dependency on PCV01D."
+  },
+  {
+    "snapshot": 43,
+    "raw_endpoint": 5750,
+    "channel": "P1_PIT01",
+    "reason": "Significant residuals in the pressure measurement which is the primary process variable for the P1-PC: PCV01D/PCV02D control loop."
+  },
+  {
+    "snapshot": 43,
+    "raw_endpoint": 5750,
+    "channel": "P1_PCV01Z",
+    "reason": "Residuals are present, but this measured position typically follows the command P1_PCV01D."
+  },
+  {
+    "snapshot": 43,
+    "raw_endpoint": 5750,
+    "channel": "P1_LCV01D",
+    "reason": "Moderate residuals for a command signal, though lower than PCV01D and associated with a different control loop (P1-LC)."
+  },
+  {
+    "snapshot": 44,
+    "raw_endpoint": 5759,
+    "channel": "P1_PCV01D",
+    "reason": "Highest residuals and CLARO score for a command signal, which is the primary driver for pressure control P1-PC."
+  },
+  {
+    "snapshot": 44,
+    "raw_endpoint": 5759,
+    "channel": "P1_PIT01",
+    "reason": "High residuals on the measured pressure, which serves as the process variable for the P1-PC loop."
+  },
+  {
+    "snapshot": 44,
+    "raw_endpoint": 5759,
+    "channel": "P1_PCV01Z",
+    "reason": "Significant residuals on the valve position measurement corresponding to the manipulated command P1_PCV01D."
+  },
+  {
+    "snapshot": 44,
+    "raw_endpoint": 5759,
+    "channel": "P1_FCV01Z",
+    "reason": "Elevated residuals on a valve position, though it belongs to the temperature control loop P1-TC rather than pressure."
+  },
+  {
+    "snapshot": 44,
+    "raw_endpoint": 5759,
+    "channel": "P1_FT01Z",
+    "reason": "Residuals are present on this flow measurement, but it is likely a secondary effect of boiler dynamics."
+  },
+  {
+    "snapshot": 63,
+    "raw_endpoint": 9139,
+    "channel": "P1_PCV01D",
+    "reason": "High 5-s residual (10.30) indicates a direct manipulation of the pressure control valve command."
+  },
+  {
+    "snapshot": 63,
+    "raw_endpoint": 9139,
+    "channel": "P1_PP04",
+    "reason": "Highest CLARO score and high 45-s residual suggest an anomaly in the cooling pump control output."
+  },
+  {
+    "snapshot": 63,
+    "raw_endpoint": 9139,
+    "channel": "P1_PP04D",
+    "reason": "Directly related to the cooling pump operation described in P1-CC."
+  },
+  {
+    "snapshot": 63,
+    "raw_endpoint": 9139,
+    "channel": "P1_LCV01D",
+    "reason": "Command for return-tank level control (P1-LC) showing elevated residuals."
+  },
+  {
+    "snapshot": 63,
+    "raw_endpoint": 9139,
+    "channel": "P1_FCV03D",
+    "reason": "Command for return-tank outflow (P1-FC) showing elevated residuals."
+  },
+  {
+    "snapshot": 64,
+    "raw_endpoint": 9141,
+    "channel": "P1_PP04",
+    "reason": "Highest CLARO score and significant residuals indicate it is the primary source of anomaly in the cooling system."
+  },
+  {
+    "snapshot": 64,
+    "raw_endpoint": 9141,
+    "channel": "P1_PCV01D",
+    "reason": "High 5-s residual suggests direct manipulation of the pressure control valve command for P1-PC loop."
+  },
+  {
+    "snapshot": 64,
+    "raw_endpoint": 9141,
+    "channel": "P1_PP04D",
+    "reason": "Directly related to the cooling pump PP04 mentioned in the P1-CC control loop description."
+  },
+  {
+    "snapshot": 64,
+    "raw_endpoint": 9141,
+    "channel": "P1_LCV01D",
+    "reason": "Command for the LCV01 valve used in the P1-LC level control loop shows elevated residuals."
+  },
+  {
+    "snapshot": 64,
+    "raw_endpoint": 9141,
+    "channel": "P1_FCV03D",
+    "reason": "Command for the FCV03 valve used in the P1-FC outflow control loop shows elevated residuals."
+  },
+  {
+    "snapshot": 65,
+    "raw_endpoint": 9143,
+    "channel": "P1_PP04",
+    "reason": "Highest CLARO score and residuals, representing the cooling pump output which is a direct control command."
+  },
+  {
+    "snapshot": 65,
+    "raw_endpoint": 9143,
+    "channel": "P1_PCV01D",
+    "reason": "High 5-s residual and second highest CLARO score for a valve position command in the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 65,
+    "raw_endpoint": 9143,
+    "channel": "P1_PP04D",
+    "reason": "Significant residuals associated with the cooling pump setpoint/command logic."
+  },
+  {
+    "snapshot": 65,
+    "raw_endpoint": 9143,
+    "channel": "P1_LCV01D",
+    "reason": "Elevated CLARO score for a valve command in the P1-LC level control loop."
+  },
+  {
+    "snapshot": 65,
+    "raw_endpoint": 9143,
+    "channel": "P1_FCV03D",
+    "reason": "Elevated CLARO score for the outflow valve command in the P1-FC flow control loop."
+  },
+  {
+    "snapshot": 66,
+    "raw_endpoint": 9145,
+    "channel": "P1_PP04",
+    "reason": "Highest residuals and CLARO score, directly controlling the cooling pump PP04 as per P1-CC."
+  },
+  {
+    "snapshot": 66,
+    "raw_endpoint": 9145,
+    "channel": "P1_PCV01D",
+    "reason": "High 5-s residual and second highest CLARO score, acting as a direct command for pressure control in P1-PC."
+  },
+  {
+    "snapshot": 66,
+    "raw_endpoint": 9145,
+    "channel": "P1_PP04D",
+    "reason": "Direct pump command associated with the cooling system (P1-CC) showing significant residuals."
+  },
+  {
+    "snapshot": 66,
+    "raw_endpoint": 9145,
+    "channel": "P1_LCV01D",
+    "reason": "A valve command used by P1-LC to keep return-tank level at setpoint B3004."
+  },
+  {
+    "snapshot": 66,
+    "raw_endpoint": 9145,
+    "channel": "P1_TIT02",
+    "reason": "Measurement in the heating system, though less likely than commands, it shows higher residuals than other process variables."
+  },
+  {
+    "snapshot": 67,
+    "raw_endpoint": 9147,
+    "channel": "P1_PP04",
+    "reason": "Highest CLARO score and residuals, directly controlling the cooling pump PP04 as per P1-CC."
+  },
+  {
+    "snapshot": 67,
+    "raw_endpoint": 9147,
+    "channel": "P1_PCV01D",
+    "reason": "High 5-s residual and second highest CLARO score; it is a command for pressure control (P1-PC)."
+  },
+  {
+    "snapshot": 67,
+    "raw_endpoint": 9147,
+    "channel": "P1_PP04D",
+    "reason": "Directly related to the cooling pump PP04 setpoint/command mentioned in P1-CC."
+  },
+  {
+    "snapshot": 67,
+    "raw_endpoint": 9147,
+    "channel": "P1_PCV01Z",
+    "reason": "Measured position of PCV01, which would deviate if the command P1_PCV01D were manipulated."
+  },
+  {
+    "snapshot": 67,
+    "raw_endpoint": 9147,
+    "channel": "P1_LCV01D",
+    "reason": "A valve command for return-tank level control (P1-LC) with a significant CLARO score."
+  },
+  {
+    "snapshot": 68,
+    "raw_endpoint": 9192,
+    "channel": "P1_PCV02D",
+    "reason": "Highest residuals and CLARO score with a mean parent residual of 0.00, indicating it is the root cause of the anomaly."
+  },
+  {
+    "snapshot": 68,
+    "raw_endpoint": 9192,
+    "channel": "P1_PIT01",
+    "reason": "Significant residuals in both time windows; as P1-PC controls PIT01 via PCV02D, this measurement responds to the valve manipulation."
+  },
+  {
+    "snapshot": 68,
+    "raw_endpoint": 9192,
+    "channel": "P1_PCV02Z",
+    "reason": "High 45-s residual indicates it is responding to the command P1_PCV02D, though the low 5-s residual suggests a lag or filtered response."
+  },
+  {
+    "snapshot": 68,
+    "raw_endpoint": 9192,
+    "channel": "P1_PCV01D",
+    "reason": "Moderate residuals; as part of the P1-PC loop (PCV01D/PCV02D), it likely responds to the control logic attempting to compensate for PIT01 deviations."
+  },
+  {
+    "snapshot": 68,
+    "raw_endpoint": 9192,
+    "channel": "P1_PCV01Z",
+    "reason": "Residuals are lower than its command counterpart, indicating it is a downstream physical response to P1_PCV01D."
+  },
+  {
+    "snapshot": 89,
+    "raw_endpoint": 12079,
+    "channel": "P1_PCV01D",
+    "reason": "Highest residuals (13.55 at 5s) and CLARO score, acting as a direct command for pressure control P1-PC."
+  },
+  {
+    "snapshot": 89,
+    "raw_endpoint": 12079,
+    "channel": "P1_FCV03D",
+    "reason": "Direct valve command in the P1-FC loop with significant residuals compared to its parents."
+  },
+  {
+    "snapshot": 89,
+    "raw_endpoint": 12079,
+    "channel": "P1_LCV01D",
+    "reason": "Direct valve command in the P1-LC loop, though 5s residual is lower than others."
+  },
+  {
+    "snapshot": 89,
+    "raw_endpoint": 12079,
+    "channel": "P1_TIT02",
+    "reason": "Measurement channel with high CLARO score and residuals not explained by control loops."
+  },
+  {
+    "snapshot": 89,
+    "raw_endpoint": 12079,
+    "channel": "P1_TIT01",
+    "reason": "Measured temperature in the P1-TC loop showing significant deviation."
+  },
+  {
+    "snapshot": 122,
+    "raw_endpoint": 16982,
+    "channel": "P1_PCV01D",
+    "reason": "Extremely high residuals (96.92 at 5s) and the highest CLARO score indicate this command is the primary source of manipulation."
+  },
+  {
+    "snapshot": 122,
+    "raw_endpoint": 16982,
+    "channel": "P1_PIT01",
+    "reason": "As the process variable for P1-PC, it responds directly to changes in PCV01D via the boiler pressure control loop."
+  },
+  {
+    "snapshot": 122,
+    "raw_endpoint": 16982,
+    "channel": "P1_PCV01Z",
+    "reason": "This is the measured position of valve PCV01 and should track the command P1_PCV01D."
+  },
+  {
+    "snapshot": 122,
+    "raw_endpoint": 16982,
+    "channel": "P1_FT01Z",
+    "reason": "Flow rate changes are a direct physical consequence of adjusting the pressure control valves in the boiler system."
+  },
+  {
+    "snapshot": 122,
+    "raw_endpoint": 16982,
+    "channel": "P1_LIT01",
+    "reason": "The return-tank level is affected by the overall water balance and flow dynamics influenced by P1-PC valve movements."
+  },
+  {
+    "snapshot": 123,
+    "raw_endpoint": 17027,
+    "channel": "P1_PCV01D",
+    "reason": "Extremely high residuals (39.63 and 91.67) and a low mean parent residual indicate this command is the primary source of the anomaly."
+  },
+  {
+    "snapshot": 123,
+    "raw_endpoint": 17027,
+    "channel": "P1_PIT01",
+    "reason": "Elevated residuals suggest it is responding to the manipulation of PCV01D via the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 123,
+    "raw_endpoint": 17027,
+    "channel": "P2_SIT01",
+    "reason": "Residuals are low, but it may respond indirectly as boiler pressure (P1_PIT01) influences the HIL simulator and subsequently turbine speed."
+  },
+  {
+    "snapshot": 123,
+    "raw_endpoint": 17027,
+    "channel": "P1_PCV02Z",
+    "reason": "Low residuals suggest this valve position is likely responding to the P1-PC control loop logic rather than being directly manipulated."
+  },
+  {
+    "snapshot": 123,
+    "raw_endpoint": 17027,
+    "channel": "P1_TIT02",
+    "reason": "Minimal residuals indicate it is a downstream effect or unrelated to the primary pressure anomaly."
+  },
+  {
+    "snapshot": 169,
+    "raw_endpoint": 24422,
+    "channel": "P1_PCV01D",
+    "reason": "Highest CLARO score and extreme 5-s residual (21.89) compared to a low mean parent residual indicates direct manipulation of the command."
+  },
+  {
+    "snapshot": 169,
+    "raw_endpoint": 24422,
+    "channel": "P1_LCV01Z",
+    "reason": "High 5-s residual (2.77) for a measured position, which typically responds to LCV01D commands in the P1-LC loop."
+  },
+  {
+    "snapshot": 169,
+    "raw_endpoint": 24422,
+    "channel": "P1_PIT01",
+    "reason": "Significant 5-s residual (2.03) on a measurement that is the primary input for the P1-PC control loop involving PCV01D."
+  },
+  {
+    "snapshot": 169,
+    "raw_endpoint": 24422,
+    "channel": "P1_FCV01Z",
+    "reason": "Elevated 5-s residual (1.96) for a valve position involved in the P1-TC temperature control cascade."
+  },
+  {
+    "snapshot": 169,
+    "raw_endpoint": 24422,
+    "channel": "P1_LIT01",
+    "reason": "Residual evidence suggests instability in the return-tank level, which is controlled by LCV01D in the P1-LC loop."
+  },
+  {
+    "snapshot": 170,
+    "raw_endpoint": 24453,
+    "channel": "P1_PCV01D",
+    "reason": "Highest CLARO score and residuals, and it is a command signal for the P1-PC loop."
+  },
+  {
+    "snapshot": 170,
+    "raw_endpoint": 24453,
+    "channel": "P1_PIT01",
+    "reason": "High residual and serves as the process variable for the P1-PC control loop that drives PCV01D."
+  },
+  {
+    "snapshot": 170,
+    "raw_endpoint": 24453,
+    "channel": "P1_PCV01Z",
+    "reason": "Significant residuals and represents the measured position of the valve commanded by P1_PCV01D."
+  },
+  {
+    "snapshot": 170,
+    "raw_endpoint": 24453,
+    "channel": "P1_FCV01Z",
+    "reason": "High CLARO score, though it is a measured position responding to the P1-TC loop (FCV01D)."
+  },
+  {
+    "snapshot": 170,
+    "raw_endpoint": 24453,
+    "channel": "P1_FT02",
+    "reason": "Elevated residuals and acts as the cascade measurement for the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 239,
+    "raw_endpoint": 34449,
+    "channel": "P1_FCV03D",
+    "reason": "Highest CLARO score and significant 5-s residual for a command signal in the P1-FC loop."
+  },
+  {
+    "snapshot": 239,
+    "raw_endpoint": 34449,
+    "channel": "P1_FCV01D",
+    "reason": "Command signal for the P1-TC loop with high CLARO score, likely manipulated to affect temperature."
+  },
+  {
+    "snapshot": 239,
+    "raw_endpoint": 34449,
+    "channel": "P1_FT03",
+    "reason": "Measurement channel that directly feeds the P1-FC control loop for FCV03D."
+  },
+  {
+    "snapshot": 239,
+    "raw_endpoint": 34449,
+    "channel": "P1_FT01",
+    "reason": "Measured flowrate in the boiler subsystem showing high residual evidence."
+  },
+  {
+    "snapshot": 239,
+    "raw_endpoint": 34449,
+    "channel": "P1_TIT01",
+    "reason": "Primary temperature measurement for the P1-TC cascade control loop."
+  },
+  {
+    "snapshot": 240,
+    "raw_endpoint": 34458,
+    "channel": "P1_FCV03D",
+    "reason": "Highest CLARO score and residuals, acting as the direct command for return-tank outflow FT03."
+  },
+  {
+    "snapshot": 240,
+    "raw_endpoint": 34458,
+    "channel": "P1_FT03",
+    "reason": "High 5-s residual; a manipulation of this measurement would directly drive the P1-FC loop via FCV03D."
+  },
+  {
+    "snapshot": 240,
+    "raw_endpoint": 34458,
+    "channel": "P1_FT03Z",
+    "reason": "High residuals and converted from FT03, making it a primary candidate for sensor spoofing."
+  },
+  {
+    "snapshot": 240,
+    "raw_endpoint": 34458,
+    "channel": "P1_FCV03Z",
+    "reason": "Significant 5-s residual indicating the actual valve position deviates from expected behavior."
+  },
+  {
+    "snapshot": 240,
+    "raw_endpoint": 34458,
+    "channel": "P1_LCV01D",
+    "reason": "High residuals and directly influenced by FCV03D via the P1-LC feed-forward loop."
+  },
+  {
+    "snapshot": 241,
+    "raw_endpoint": 34481,
+    "channel": "P1_FCV03D",
+    "reason": "Highest residuals and CLARO score, acting as the direct command for return-tank outflow FT03."
+  },
+  {
+    "snapshot": 241,
+    "raw_endpoint": 34481,
+    "channel": "P1_LCV01D",
+    "reason": "High residual and directly linked to P1_FCV03D via the P1-LC control loop feed-forward from FCV03D."
+  },
+  {
+    "snapshot": 241,
+    "raw_endpoint": 34481,
+    "channel": "P1_FT03Z",
+    "reason": "Residual is high, but it is a converted measurement of FT03 which responds to FCV03D position."
+  },
+  {
+    "snapshot": 241,
+    "raw_endpoint": 34481,
+    "channel": "P1_FT03",
+    "reason": "Residual is high, but as a measured flowrate, it is a process response to the manipulation of FCV03D."
+  },
+  {
+    "snapshot": 241,
+    "raw_endpoint": 34481,
+    "channel": "P1_FCV03Z",
+    "reason": "Residual is lower than the command and represents the measured position responding to the P1_FCV03D command."
+  },
+  {
+    "snapshot": 255,
+    "raw_endpoint": 37269,
+    "channel": "P1_FCV03D",
+    "reason": "It has the highest residuals and CLARO score, and as a command for P1-FC, it directly drives the return-tank outflow FT03."
+  },
+  {
+    "snapshot": 255,
+    "raw_endpoint": 37269,
+    "channel": "P1_LCV01Z",
+    "reason": "High 5-s residual; LCV01D is part of the P1-LC loop which receives feed-forward input from FCV03D."
+  },
+  {
+    "snapshot": 255,
+    "raw_endpoint": 37269,
+    "channel": "P1_FT03Z",
+    "reason": "This measurement directly reflects the outflow FT03 controlled by FCV03D."
+  },
+  {
+    "snapshot": 255,
+    "raw_endpoint": 37269,
+    "channel": "P1_TIT01",
+    "reason": "High CLARO score; temperature is managed by P1-TC and affected by water flow changes in the boiler system."
+  },
+  {
+    "snapshot": 255,
+    "raw_endpoint": 37269,
+    "channel": "P1_FT01Z",
+    "reason": "Residuals indicate an anomaly in return tank inflow, which is coupled with the outflow balance in the P1-LC loop."
+  },
+  {
+    "snapshot": 256,
+    "raw_endpoint": 37301,
+    "channel": "P1_FCV03D",
+    "reason": "Highest residuals and CLARO score, acting as a command for the P1-FC control loop."
+  },
+  {
+    "snapshot": 256,
+    "raw_endpoint": 37301,
+    "channel": "P1_FT03Z",
+    "reason": "High residual and is the converted measurement of FT03 used in the P1-FC loop."
+  },
+  {
+    "snapshot": 256,
+    "raw_endpoint": 37301,
+    "channel": "P1_FT03",
+    "reason": "High residual and is the primary flowrate measurement for the P1-FC control loop."
+  },
+  {
+    "snapshot": 256,
+    "raw_endpoint": 37301,
+    "channel": "P1_LCV01D",
+    "reason": "Significant residual and is a command valve that receives feed-forward input from FCV03D in the P1-LC loop."
+  },
+  {
+    "snapshot": 256,
+    "raw_endpoint": 37301,
+    "channel": "P1_LIT01",
+    "reason": "Residual indicates anomaly in the return-tank level, which is the process variable for the P1-LC control loop."
+  },
+  {
+    "snapshot": 285,
+    "raw_endpoint": 41165,
+    "channel": "P1_FCV03D",
+    "reason": "Extremely high 5-s residual (10.92) suggests direct manipulation of the return-tank outflow command."
+  },
+  {
+    "snapshot": 285,
+    "raw_endpoint": 41165,
+    "channel": "P1_PCV01D",
+    "reason": "High CLARO score and significant residuals for a valve command used in the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 285,
+    "raw_endpoint": 41165,
+    "channel": "P1_TIT01",
+    "reason": "Significant residuals on this measurement, which is the primary process variable for the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 285,
+    "raw_endpoint": 41165,
+    "channel": "P1_FT01",
+    "reason": "Elevated residuals on a flow measurement that directly influences the P1-LC level control feed-forward logic via FCV03D."
+  },
+  {
+    "snapshot": 285,
+    "raw_endpoint": 41165,
+    "channel": "P1_FT02",
+    "reason": "Residuals are present on this heating flow measurement, which is part of the cascade for the P1-TC temperature loop."
+  },
+  {
+    "snapshot": 286,
+    "raw_endpoint": 41185,
+    "channel": "P1_FCV03D",
+    "reason": "Highest residuals and CLARO score, and it is a command signal for the P1-FC control loop."
+  },
+  {
+    "snapshot": 286,
+    "raw_endpoint": 41185,
+    "channel": "P1_PCV01D",
+    "reason": "High residual and it is a valve command for the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 286,
+    "raw_endpoint": 41185,
+    "channel": "P1_TIT01",
+    "reason": "Significant residual and it is the primary measurement for the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 286,
+    "raw_endpoint": 41185,
+    "channel": "P1_FT03Z",
+    "reason": "High residuals, but as a converted measurement of FT03, it likely responds to FCV03D manipulation."
+  },
+  {
+    "snapshot": 286,
+    "raw_endpoint": 41185,
+    "channel": "P1_FT03",
+    "reason": "Significant residual and is the measured flowrate that P1-FC (via FCV03D) aims to keep at setpoint B3005."
+  },
+  {
+    "snapshot": 465,
+    "raw_endpoint": 69669,
+    "channel": "P1_LCV01D",
+    "reason": "Highest residuals and CLARO score, acting as a direct command for the return-tank level control loop P1-LC."
+  },
+  {
+    "snapshot": 465,
+    "raw_endpoint": 69669,
+    "channel": "P1_PIT01",
+    "reason": "High 5-s residual in a measurement that is a primary setpoint target for the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 465,
+    "raw_endpoint": 69669,
+    "channel": "P1_FT01",
+    "reason": "Significant residuals in a measured flowrate, which would directly impact converted values like P1_FT01Z."
+  },
+  {
+    "snapshot": 465,
+    "raw_endpoint": 69669,
+    "channel": "P1_FT01Z",
+    "reason": "High residuals derived from P1_FT01, though likely secondary to the raw measurement manipulation."
+  },
+  {
+    "snapshot": 465,
+    "raw_endpoint": 69669,
+    "channel": "P1_PCV01D",
+    "reason": "Elevated CLARO score for a command valve that directly influences pressure PIT01 in the P1-PC loop."
+  },
+  {
+    "snapshot": 466,
+    "raw_endpoint": 69671,
+    "channel": "P1_LCV01D",
+    "reason": "Highest residuals and CLARO score, acting as a command for the P1-LC loop."
+  },
+  {
+    "snapshot": 466,
+    "raw_endpoint": 69671,
+    "channel": "P1_FCV03D",
+    "reason": "High 5-s residual and acts as a command for the P1-FC loop which provides feed-forward to P1-LC."
+  },
+  {
+    "snapshot": 466,
+    "raw_endpoint": 69671,
+    "channel": "P1_PCV01D",
+    "reason": "Significant residuals and serves as a direct valve command for the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 466,
+    "raw_endpoint": 69671,
+    "channel": "P1_PIT01",
+    "reason": "High 5-s residual and is the primary measurement for the P1-PC control loop."
+  },
+  {
+    "snapshot": 466,
+    "raw_endpoint": 69671,
+    "channel": "P1_FT03Z",
+    "reason": "Significant residuals and represents the outflow rate FT03 which is the setpoint target for FCV03D."
+  },
+  {
+    "snapshot": 467,
+    "raw_endpoint": 69693,
+    "channel": "P1_LCV01D",
+    "reason": "Highest residuals and CLARO score, acting as a command for the P1-LC loop."
+  },
+  {
+    "snapshot": 467,
+    "raw_endpoint": 69693,
+    "channel": "P1_LCV01Z",
+    "reason": "Measured position of LCV01 showing significant residuals, likely responding to or mimicking the P1_LCV01D command."
+  },
+  {
+    "snapshot": 467,
+    "raw_endpoint": 69693,
+    "channel": "P1_FT01",
+    "reason": "Return water tank flowrate is directly affected by the LCV01 valve operation in the P1-LC loop."
+  },
+  {
+    "snapshot": 467,
+    "raw_endpoint": 69693,
+    "channel": "P1_FT01Z",
+    "reason": "Converted value of FT01, showing residuals consistent with the return water tank flow anomaly."
+  },
+  {
+    "snapshot": 467,
+    "raw_endpoint": 69693,
+    "channel": "P1_LIT01",
+    "reason": "Return-tank level is the controlled variable for LCV01D in the P1-LC loop."
+  },
+  {
+    "snapshot": 501,
+    "raw_endpoint": 74765,
+    "channel": "P1_LCV01D",
+    "reason": "Highest residuals and CLARO score for a command signal, which is the direct output of the P1-LC control loop."
+  },
+  {
+    "snapshot": 501,
+    "raw_endpoint": 74765,
+    "channel": "P1_LIT01",
+    "reason": "High residuals for a measurement that serves as the primary input to the P1-LC control loop."
+  },
+  {
+    "snapshot": 501,
+    "raw_endpoint": 74765,
+    "channel": "P1_PCV01D",
+    "reason": "Significant residuals for a command signal used by the P1-PC loop to maintain pressure PIT01."
+  },
+  {
+    "snapshot": 501,
+    "raw_endpoint": 74765,
+    "channel": "P1_TIT01",
+    "reason": "Elevated residuals for the temperature measurement that is the setpoint target for the P1-TC cascade loop."
+  },
+  {
+    "snapshot": 501,
+    "raw_endpoint": 74765,
+    "channel": "P1_FCV01Z",
+    "reason": "Residuals present on a valve position measurement associated with the P1-TC heating flow control."
+  },
+  {
+    "snapshot": 502,
+    "raw_endpoint": 74788,
+    "channel": "P1_LCV01D",
+    "reason": "Highest CLARO score and residuals, and it is a command signal for the P1-LC loop."
+  },
+  {
+    "snapshot": 502,
+    "raw_endpoint": 74788,
+    "channel": "P1_LIT01",
+    "reason": "High residuals and serves as the primary measurement for the P1-LC control loop."
+  },
+  {
+    "snapshot": 502,
+    "raw_endpoint": 74788,
+    "channel": "P1_PCV01D",
+    "reason": "Significant residuals and is a command signal for the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 502,
+    "raw_endpoint": 74788,
+    "channel": "P1_PIT01",
+    "reason": "Elevated residuals and is the setpoint measurement (PIT01) for the P1-PC loop."
+  },
+  {
+    "snapshot": 502,
+    "raw_endpoint": 74788,
+    "channel": "P1_FT01Z",
+    "reason": "Significant residuals and represents a converted flow measurement in the boiler subsystem."
+  },
+  {
+    "snapshot": 503,
+    "raw_endpoint": 74795,
+    "channel": "P1_LCV01D",
+    "reason": "Highest CLARO score and residuals, and it is a command signal for the P1-LC loop."
+  },
+  {
+    "snapshot": 503,
+    "raw_endpoint": 74795,
+    "channel": "P1_LIT01",
+    "reason": "High residuals and serves as the primary measurement for the P1-LC control loop."
+  },
+  {
+    "snapshot": 503,
+    "raw_endpoint": 74795,
+    "channel": "P1_PIT01",
+    "reason": "Significant residuals and is the setpoint-monitored pressure for the P1-PC loop."
+  },
+  {
+    "snapshot": 503,
+    "raw_endpoint": 74795,
+    "channel": "P1_PCV01D",
+    "reason": "Elevated residuals and acts as a command signal for the P1-PC control loop."
+  },
+  {
+    "snapshot": 503,
+    "raw_endpoint": 74795,
+    "channel": "P1_FT01",
+    "reason": "Moderate residuals and is a measured flowrate within the boiler subsystem."
+  },
+  {
+    "snapshot": 517,
+    "raw_endpoint": 76865,
+    "channel": "P1_LCV01D",
+    "reason": "Extremely high residuals (45-s: 10.87, 5-s: 147.17) and low mean parent residual indicate it is the primary source of the anomaly in the P1-LC level control loop."
+  },
+  {
+    "snapshot": 517,
+    "raw_endpoint": 76865,
+    "channel": "P1_PCV01D",
+    "reason": "Shows elevated residuals and a high CLARO score as a command signal for the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 517,
+    "raw_endpoint": 76865,
+    "channel": "P2_VIBTR03",
+    "reason": "Elevated residuals in a measurement channel that does not belong to a feedback control loop, suggesting potential direct manipulation."
+  },
+  {
+    "snapshot": 517,
+    "raw_endpoint": 76865,
+    "channel": "P2_VIBTR04",
+    "reason": "Similar to VIBTR03, this vibration probe shows anomalous residuals without being part of a documented control loop."
+  },
+  {
+    "snapshot": 517,
+    "raw_endpoint": 76865,
+    "channel": "P2_VIBTR01",
+    "reason": "Shows anomalous residuals in the turbine rotor kit's vibration monitoring system."
+  },
+  {
+    "snapshot": 518,
+    "raw_endpoint": 76910,
+    "channel": "P1_LCV01D",
+    "reason": "Extremely high residuals (45-s: 72.32, 5-s: 305.66) and the highest CLARO score indicate this command is the primary source of anomaly."
+  },
+  {
+    "snapshot": 518,
+    "raw_endpoint": 76910,
+    "channel": "P1_PIT01",
+    "reason": "Shows significant residuals and acts as the process variable for the P1-PC control loop involving PCV01D/PCV02D."
+  },
+  {
+    "snapshot": 518,
+    "raw_endpoint": 76910,
+    "channel": "P1_FT01Z",
+    "reason": "High residuals in this converted flow measurement suggest direct manipulation or a sensor fault affecting the return tank logic."
+  },
+  {
+    "snapshot": 518,
+    "raw_endpoint": 76910,
+    "channel": "P1_FT01",
+    "reason": "Strongly correlated with P1_FT01Z, showing high residuals that likely drive the observed anomalies in the LCV01 loop."
+  },
+  {
+    "snapshot": 518,
+    "raw_endpoint": 76910,
+    "channel": "P1_LCV01Z",
+    "reason": "High residuals suggest this measured position is deviating from expected behavior relative to the P1-LC control loop."
+  },
+  {
+    "snapshot": 590,
+    "raw_endpoint": 88926,
+    "channel": "P1_LCV01D",
+    "reason": "Highest residuals (especially the 5-s residual of 9.71) and CLARO score indicate it is the primary source of anomaly."
+  },
+  {
+    "snapshot": 590,
+    "raw_endpoint": 88926,
+    "channel": "P1_FCV03D",
+    "reason": "High CLARO score and a command signal that directly influences P1-LC via feed-forward logic."
+  },
+  {
+    "snapshot": 590,
+    "raw_endpoint": 88926,
+    "channel": "P1_PCV01D",
+    "reason": "A control command for the P1-PC loop with significant residuals, suggesting potential direct manipulation."
+  },
+  {
+    "snapshot": 590,
+    "raw_endpoint": 88926,
+    "channel": "P1_TIT01",
+    "reason": "High CLARO score and a key measurement in the P1-TC cascade loop."
+  },
+  {
+    "snapshot": 590,
+    "raw_endpoint": 88926,
+    "channel": "P1_LIT01",
+    "reason": "The primary process variable for the P1-LC loop, which is directly linked to the highly anomalous LCV01D."
+  },
+  {
+    "snapshot": 591,
+    "raw_endpoint": 88928,
+    "channel": "P1_LCV01D",
+    "reason": "Highest residuals (45s: 1.54, 5s: 9.71) and CLARO score indicate it is the primary source of anomaly."
+  },
+  {
+    "snapshot": 591,
+    "raw_endpoint": 88928,
+    "channel": "P1_FCV03D",
+    "reason": "Command signal for return-tank outflow which provides feed-forward input to the P1-LC loop controlling LCV01D."
+  },
+  {
+    "snapshot": 591,
+    "raw_endpoint": 88928,
+    "channel": "P1_FT03Z",
+    "reason": "Converted measurement of FT03, which is the process variable for the P1-FC control loop driving FCV03D."
+  },
+  {
+    "snapshot": 591,
+    "raw_endpoint": 88928,
+    "channel": "P1_FT03",
+    "reason": "Direct flowrate measurement that determines the setpoint behavior of the return water tank outflow (P1-FC)."
+  },
+  {
+    "snapshot": 591,
+    "raw_endpoint": 88928,
+    "channel": "P1_LIT01",
+    "reason": "Process variable for the P1-LC loop which directly commands LCV01D to maintain setpoint B3004."
+  },
+  {
+    "snapshot": 592,
+    "raw_endpoint": 88930,
+    "channel": "P1_LCV01D",
+    "reason": "Highest residuals (10.21 at 5s) and CLARO score, indicating it is the primary source of anomaly in the P1-LC level control loop."
+  },
+  {
+    "snapshot": 592,
+    "raw_endpoint": 88930,
+    "channel": "P1_FCV03D",
+    "reason": "High residual and command status; it provides feed-forward input to the P1-LC loop controlling LCV01D."
+  },
+  {
+    "snapshot": 592,
+    "raw_endpoint": 88930,
+    "channel": "P1_FT03Z",
+    "reason": "Elevated residuals in a converted measurement that directly influences the P1-FC control loop for FCV03D."
+  },
+  {
+    "snapshot": 592,
+    "raw_endpoint": 88930,
+    "channel": "P1_FT03",
+    "reason": "High residual in the raw flow measurement used by the P1-FC loop to drive FCV03D."
+  },
+  {
+    "snapshot": 592,
+    "raw_endpoint": 88930,
+    "channel": "P1_PIT01",
+    "reason": "Elevated residuals in the pressure measurement that serves as the setpoint basis for the P1-PC control loop."
+  },
+  {
+    "snapshot": 593,
+    "raw_endpoint": 88932,
+    "channel": "P1_LCV01D",
+    "reason": "Highest residuals and CLARO score, acting as a direct command for the return-tank level control loop P1-LC."
+  },
+  {
+    "snapshot": 593,
+    "raw_endpoint": 88932,
+    "channel": "P1_FCV03D",
+    "reason": "High residual and serves as the setpoint/command for outflow FT03 in the P1-FC loop, which also provides feed-forward to LCV01D."
+  },
+  {
+    "snapshot": 593,
+    "raw_endpoint": 88932,
+    "channel": "P1_PCV01D",
+    "reason": "Direct command valve used by the P1-PC loop to maintain pressure PIT01 at setpoint B2016."
+  },
+  {
+    "snapshot": 593,
+    "raw_endpoint": 88932,
+    "channel": "P1_PIT01",
+    "reason": "Measurement channel that directly influences the P1-PC control loop and is sent to the HIL simulator (P4)."
+  },
+  {
+    "snapshot": 593,
+    "raw_endpoint": 88932,
+    "channel": "P1_TIT01",
+    "reason": "Measurement channel that directly influences the P1-TC control loop and determines STM steam temperature in P4."
+  },
+  {
+    "snapshot": 594,
+    "raw_endpoint": 88966,
+    "channel": "P1_LCV01D",
+    "reason": "Highest CLARO score and residuals, acting as a direct command for the P1-LC loop."
+  },
+  {
+    "snapshot": 594,
+    "raw_endpoint": 88966,
+    "channel": "P1_FCV03D",
+    "reason": "High residuals and serves as a direct command for the P1-FC loop which provides feed-forward to P1-LC."
+  },
+  {
+    "snapshot": 594,
+    "raw_endpoint": 88966,
+    "channel": "P1_FT03",
+    "reason": "Significant 5-s residual and is the primary measurement (setpoint B3005) for the P1-FC control loop."
+  },
+  {
+    "snapshot": 594,
+    "raw_endpoint": 88966,
+    "channel": "P1_TIT01",
+    "reason": "Elevated residuals and serves as the primary process variable for the P1-TC cascade loop."
+  },
+  {
+    "snapshot": 594,
+    "raw_endpoint": 88966,
+    "channel": "P1_PIT01",
+    "reason": "Residuals are present and it is the primary measurement (setpoint B2016) for the P1-PC control loop."
+  },
+  {
+    "snapshot": 614,
+    "raw_endpoint": 92166,
+    "channel": "P1_LCV01D",
+    "reason": "High 5-s residual (9.16) indicates a direct command manipulation in the P1-LC loop."
+  },
+  {
+    "snapshot": 614,
+    "raw_endpoint": 92166,
+    "channel": "P1_PCV01D",
+    "reason": "Direct valve command for pressure control with significant residuals compared to its parents."
+  },
+  {
+    "snapshot": 614,
+    "raw_endpoint": 92166,
+    "channel": "P1_FCV02Z",
+    "reason": "High 45-s residual (1.43) suggests manipulation of the heating flow valve position in the P1-TC loop."
+  },
+  {
+    "snapshot": 614,
+    "raw_endpoint": 92166,
+    "channel": "P1_TIT01",
+    "reason": "Direct measurement of heat-exchanger outlet temperature used as the primary variable for the P1-TC loop."
+  },
+  {
+    "snapshot": 614,
+    "raw_endpoint": 92166,
+    "channel": "P1_FCV01Z",
+    "reason": "Valve position measurement in the P1-TC cascade control loop showing anomalous residuals."
+  },
+  {
+    "snapshot": 615,
+    "raw_endpoint": 92190,
+    "channel": "P1_LCV01D",
+    "reason": "It has the highest residuals (45-s: 3.17, 5-s: 14.70) and a low mean parent residual, indicating it is the source of the anomaly."
+  },
+  {
+    "snapshot": 615,
+    "raw_endpoint": 92190,
+    "channel": "P1_LIT01",
+    "reason": "As the process variable for the P1-LC {LCV01D} loop, it responds directly to manipulations of LCV01D."
+  },
+  {
+    "snapshot": 615,
+    "raw_endpoint": 92190,
+    "channel": "P1_FT03Z",
+    "reason": "The P1-LC loop uses feed-forward from outflow valve FCV03D/FT03, creating a direct dependency with the level control system."
+  },
+  {
+    "snapshot": 615,
+    "raw_endpoint": 92190,
+    "channel": "P1_FT01Z",
+    "reason": "This is the converted measurement of inflow which directly affects return-tank level LIT01."
+  },
+  {
+    "snapshot": 615,
+    "raw_endpoint": 92190,
+    "channel": "P1_LCV01Z",
+    "reason": "As the measured position of valve LCV01, it typically tracks the command LCV01D."
+  },
+  {
+    "snapshot": 616,
+    "raw_endpoint": 92203,
+    "channel": "P1_LCV01D",
+    "reason": "Highest CLARO score and residuals, acting as a command for the P1-LC loop."
+  },
+  {
+    "snapshot": 616,
+    "raw_endpoint": 92203,
+    "channel": "P1_LCV01Z",
+    "reason": "High residuals in position measurement, directly coupled to LCV01D command."
+  },
+  {
+    "snapshot": 616,
+    "raw_endpoint": 92203,
+    "channel": "P1_PIT01",
+    "reason": "Significant residuals in pressure measurement, which is the controlled variable for P1-PC loop."
+  },
+  {
+    "snapshot": 616,
+    "raw_endpoint": 92203,
+    "channel": "P1_LIT01",
+    "reason": "Elevated residuals in return-tank level, the primary process variable for the P1-LC control loop."
+  },
+  {
+    "snapshot": 616,
+    "raw_endpoint": 92203,
+    "channel": "P1_FT01",
+    "reason": "Significant residuals in flowrate measurement, which relates to the water transfer system described in P1."
+  },
+  {
+    "snapshot": 644,
+    "raw_endpoint": 95713,
+    "channel": "x1003_10_SETPOINT_OUT",
+    "reason": "This is a DCS logic block output for temperature control, making it a primary target for manipulating the P1-TC loop."
+  },
+  {
+    "snapshot": 644,
+    "raw_endpoint": 95713,
+    "channel": "P1_FCV01D",
+    "reason": "As a valve command in the P1-TC cascade loop, it can be directly manipulated to alter heating flow."
+  },
+  {
+    "snapshot": 644,
+    "raw_endpoint": 95713,
+    "channel": "P1_FT02Z",
+    "reason": "High residuals suggest this converted measurement is being spoofed to deceive the P1-TC cascade control."
+  },
+  {
+    "snapshot": 644,
+    "raw_endpoint": 95713,
+    "channel": "P1_FCV01Z",
+    "reason": "The measured position of valve FCV01D may be manipulated to hide the actual state of the heating flow."
+  },
+  {
+    "snapshot": 644,
+    "raw_endpoint": 95713,
+    "channel": "P1_FT02",
+    "reason": "Direct manipulation of the raw flowrate measurement would propagate to FT02Z and affect the P1-TC loop."
+  },
+  {
+    "snapshot": 645,
+    "raw_endpoint": 95753,
+    "channel": "P1_FCV01D",
+    "reason": "As a command signal for the P1-TC loop, it is a primary target for manipulation that would subsequently drive FCV01Z and FT02Z."
+  },
+  {
+    "snapshot": 645,
+    "raw_endpoint": 95753,
+    "channel": "P1_PCV01D",
+    "reason": "This is a direct valve command for the P1-PC pressure control loop (PIT01), making it a likely point of injection."
+  },
+  {
+    "snapshot": 645,
+    "raw_endpoint": 95753,
+    "channel": "P1_FCV01Z",
+    "reason": "While often a response to FCV01D, a direct manipulation of the valve position feedback or actuator can cause the observed residuals in FT02Z."
+  },
+  {
+    "snapshot": 645,
+    "raw_endpoint": 95753,
+    "channel": "P1_PCV01Z",
+    "reason": "The high 5-s residual suggests a sudden change in the actual position of the PCV01 valve relative to its command."
+  },
+  {
+    "snapshot": 645,
+    "raw_endpoint": 95753,
+    "channel": "P1_FT02",
+    "reason": "Direct manipulation of this measurement would deceive the P1-TC cascade loop, which uses heating flow FT02 to maintain TIT01."
+  },
+  {
+    "snapshot": 646,
+    "raw_endpoint": 95763,
+    "channel": "P1_PP04",
+    "reason": "Highest residuals (14.95 at 5s) and CLARO score, acting as a pump command for the cooling system."
+  },
+  {
+    "snapshot": 646,
+    "raw_endpoint": 95763,
+    "channel": "P1_PCV01D",
+    "reason": "High CLARO score and residual for a pressure control valve command in the P1-PC loop."
+  },
+  {
+    "snapshot": 646,
+    "raw_endpoint": 95763,
+    "channel": "P1_FCV01D",
+    "reason": "Direct position command for FCV01 used in the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 646,
+    "raw_endpoint": 95763,
+    "channel": "P1_PCV01Z",
+    "reason": "Significant 5s residual (2.60) for the measured position of the pressure control valve."
+  },
+  {
+    "snapshot": 646,
+    "raw_endpoint": 95763,
+    "channel": "P1_FCV01Z",
+    "reason": "High CLARO score for the measured position of the FCV01 valve."
+  },
+  {
+    "snapshot": 695,
+    "raw_endpoint": 103684,
+    "channel": "P1_PP04",
+    "reason": "Highest residuals and CLARO score, acting as a command for the cooling pump PP04."
+  },
+  {
+    "snapshot": 695,
+    "raw_endpoint": 103684,
+    "channel": "P1_PCV01D",
+    "reason": "Direct valve position command for pressure control P1-PC, whereas PCV01Z is its measured response."
+  },
+  {
+    "snapshot": 695,
+    "raw_endpoint": 103684,
+    "channel": "P1_PIT01",
+    "reason": "Primary measurement for the P1-PC loop; manipulation here would drive changes in PCV01D/Z."
+  },
+  {
+    "snapshot": 695,
+    "raw_endpoint": 103684,
+    "channel": "P1_FT03",
+    "reason": "Direct input to the P1-FC control loop which manages return-tank outflow via FCV03D."
+  },
+  {
+    "snapshot": 695,
+    "raw_endpoint": 103684,
+    "channel": "P1_FT02",
+    "reason": "Measured flowrate used in the cascade temperature control loop P1-TC."
+  },
+  {
+    "snapshot": 706,
+    "raw_endpoint": 105905,
+    "channel": "x1003_10_SETPOINT_OUT",
+    "reason": "Highest residuals across both time windows and is a DCS logic block output for temperature control."
+  },
+  {
+    "snapshot": 706,
+    "raw_endpoint": 105905,
+    "channel": "P1_FCV01D",
+    "reason": "High residual and is a direct valve command part of the P1-TC loop."
+  },
+  {
+    "snapshot": 706,
+    "raw_endpoint": 105905,
+    "channel": "P1_FT02Z",
+    "reason": "High residual and represents a converted measurement used in the P1-TC cascade loop."
+  },
+  {
+    "snapshot": 706,
+    "raw_endpoint": 105905,
+    "channel": "P1_FCV01Z",
+    "reason": "Significant residual and is the measured position of valve FCV01D."
+  },
+  {
+    "snapshot": 706,
+    "raw_endpoint": 105905,
+    "channel": "P1_FT02",
+    "reason": "Elevated residual and is the raw measurement for heating flow FT02 used in P1-TC."
+  },
+  {
+    "snapshot": 707,
+    "raw_endpoint": 105923,
+    "channel": "P1_PP04",
+    "reason": "Highest residuals across both time windows and lowest mean parent residual, indicating it is the source of the anomaly."
+  },
+  {
+    "snapshot": 707,
+    "raw_endpoint": 105923,
+    "channel": "x1003_10_SETPOINT_OUT",
+    "reason": "High 45-s residual and low mean parent residual suggest direct manipulation of the temperature control logic block output."
+  },
+  {
+    "snapshot": 707,
+    "raw_endpoint": 105923,
+    "channel": "P1_FCV01D",
+    "reason": "Significant residuals in a command channel that drives P1-TC, though it may be responding to x1003_10_SETPOINT_OUT."
+  },
+  {
+    "snapshot": 707,
+    "raw_endpoint": 105923,
+    "channel": "P1_FT02Z",
+    "reason": "High residuals in a converted measurement used for the P1-TC cascade loop."
+  },
+  {
+    "snapshot": 707,
+    "raw_endpoint": 105923,
+    "channel": "P1_FCV01Z",
+    "reason": "Residuals are present, but this is likely a response to the command P1_FCV01D."
+  },
+  {
+    "snapshot": 813,
+    "raw_endpoint": 124806,
+    "channel": "P1_FCV01D",
+    "reason": "The extremely high 5-s residual (7.78) indicates a sudden direct manipulation of this valve command, which is part of the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 813,
+    "raw_endpoint": 124806,
+    "channel": "P1_FT01Z",
+    "reason": "High CLARO score and residuals suggest manipulation of the converted flow measurement."
+  },
+  {
+    "snapshot": 813,
+    "raw_endpoint": 124806,
+    "channel": "P1_FT01",
+    "reason": "High CLARO score and residuals suggest manipulation of the raw return water tank flowrate measurement."
+  },
+  {
+    "snapshot": 813,
+    "raw_endpoint": 124806,
+    "channel": "P1_FCV03D",
+    "reason": "Significant 45-s residual for a command channel in the P1-FC outflow control loop."
+  },
+  {
+    "snapshot": 813,
+    "raw_endpoint": 124806,
+    "channel": "P1_TIT02",
+    "reason": "Elevated residuals for a temperature measurement that is not a primary controlled setpoint."
+  },
+  {
+    "snapshot": 814,
+    "raw_endpoint": 124808,
+    "channel": "P1_FCV01D",
+    "reason": "Highest residuals and CLARO score, acting as a command for the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 814,
+    "raw_endpoint": 124808,
+    "channel": "P1_FCV01Z",
+    "reason": "High 5-s residual suggests it is directly manipulated or closely coupled to the FCV01D command."
+  },
+  {
+    "snapshot": 814,
+    "raw_endpoint": 124808,
+    "channel": "P1_FCV03D",
+    "reason": "Command for P1-FC loop with high CLARO score and significant residuals."
+  },
+  {
+    "snapshot": 814,
+    "raw_endpoint": 124808,
+    "channel": "P1_PCV01D",
+    "reason": "Direct valve command for the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 814,
+    "raw_endpoint": 124808,
+    "channel": "P1_FT01",
+    "reason": "Measured flowrate that serves as a primary input to the boiler's water transfer system."
+  },
+  {
+    "snapshot": 815,
+    "raw_endpoint": 124810,
+    "channel": "P1_FCV01D",
+    "reason": "Highest residuals and CLARO score for a command signal, indicating direct manipulation of the P1-TC loop."
+  },
+  {
+    "snapshot": 815,
+    "raw_endpoint": 124810,
+    "channel": "P1_FCV03D",
+    "reason": "A control command (P1-FC) with high residual evidence, though lower than FCV01D."
+  },
+  {
+    "snapshot": 815,
+    "raw_endpoint": 124810,
+    "channel": "P1_PCV01D",
+    "reason": "A control command for the P1-PC loop showing significant residuals."
+  },
+  {
+    "snapshot": 815,
+    "raw_endpoint": 124810,
+    "channel": "P1_FT01",
+    "reason": "High residuals in a measurement channel that serves as an input to converted values like FT01Z."
+  },
+  {
+    "snapshot": 815,
+    "raw_endpoint": 124810,
+    "channel": "P1_FCV01Z",
+    "reason": "Measured position of FCV01, likely responding to the manipulation of its command P1_FCV01D."
+  },
+  {
+    "snapshot": 816,
+    "raw_endpoint": 124825,
+    "channel": "P1_FCV01D",
+    "reason": "Highest CLARO score and significant residuals (7.69 at 5s), indicating it is the primary source of manipulation in the P1-TC loop."
+  },
+  {
+    "snapshot": 816,
+    "raw_endpoint": 124825,
+    "channel": "P1_FCV01Z",
+    "reason": "High residuals but likely a response to the command P1_FCV01D, as Z represents measured position versus D for command."
+  },
+  {
+    "snapshot": 816,
+    "raw_endpoint": 124825,
+    "channel": "P1_FT01Z",
+    "reason": "Elevated residuals and high CLARO score, though flow is typically a process response to valve movements."
+  },
+  {
+    "snapshot": 816,
+    "raw_endpoint": 124825,
+    "channel": "P1_FT01",
+    "reason": "Similar residual profile to P1_FT01Z; it is the raw measurement from which FT01Z is converted."
+  },
+  {
+    "snapshot": 816,
+    "raw_endpoint": 124825,
+    "channel": "P1_LIT01",
+    "reason": "Residuals are present, but level changes in the return tank are a downstream effect of flow changes (FCV01D/FCV03D) per P1-LC loop."
+  },
+  {
+    "snapshot": 817,
+    "raw_endpoint": 124827,
+    "channel": "P1_FCV01D",
+    "reason": "Highest residuals and CLARO score for a command signal, which is the primary driver of the P1-TC loop."
+  },
+  {
+    "snapshot": 817,
+    "raw_endpoint": 124827,
+    "channel": "P1_FCV01Z",
+    "reason": "High residuals suggest manipulation of the valve position measurement corresponding to the FCV01D command."
+  },
+  {
+    "snapshot": 817,
+    "raw_endpoint": 124827,
+    "channel": "P1_FT02",
+    "reason": "Significant 5-s residual in heating flow, which is part of the P1-TC cascade loop with FCV01D/FCV02D."
+  },
+  {
+    "snapshot": 817,
+    "raw_endpoint": 124827,
+    "channel": "P1_PIT02",
+    "reason": "Elevated residuals in supply pressure associated with the heating water pump system."
+  },
+  {
+    "snapshot": 817,
+    "raw_endpoint": 124827,
+    "channel": "P1_FT01Z",
+    "reason": "Residuals indicate an anomaly in the return water tank inflow, though lower than the FCV01 command chain."
+  },
+  {
+    "snapshot": 818,
+    "raw_endpoint": 124829,
+    "channel": "P1_FCV01D",
+    "reason": "Highest CLARO score and residuals, and it is a command channel for the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 818,
+    "raw_endpoint": 124829,
+    "channel": "P1_FCV03D",
+    "reason": "A command channel for the P1-FC outflow control loop with significant residuals."
+  },
+  {
+    "snapshot": 818,
+    "raw_endpoint": 124829,
+    "channel": "P1_LCV01D",
+    "reason": "A command channel for the P1-LC level control loop with significant residuals."
+  },
+  {
+    "snapshot": 818,
+    "raw_endpoint": 124829,
+    "channel": "P1_FCV01Z",
+    "reason": "High residuals, but as a measured position (Z), it typically responds to the FCV01D command."
+  },
+  {
+    "snapshot": 818,
+    "raw_endpoint": 124829,
+    "channel": "P1_FT02",
+    "reason": "Measured flowrate that is part of the P1-TC cascade control loop involving FCV01D/FCV02D."
+  },
+  {
+    "snapshot": 819,
+    "raw_endpoint": 124845,
+    "channel": "P1_FCV01D",
+    "reason": "Highest CLARO score and residuals, acting as a command for the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 819,
+    "raw_endpoint": 124845,
+    "channel": "P1_FCV01Z",
+    "reason": "High residuals and directly coupled to the FCV01D command as its measured position."
+  },
+  {
+    "snapshot": 819,
+    "raw_endpoint": 124845,
+    "channel": "P1_FT02",
+    "reason": "Significant residuals and part of the P1-TC cascade loop (heating flow FT02)."
+  },
+  {
+    "snapshot": 819,
+    "raw_endpoint": 124845,
+    "channel": "P1_FT02Z",
+    "reason": "Residuals are present as it is a direct conversion from the measured flowrate P1_FT02."
+  },
+  {
+    "snapshot": 819,
+    "raw_endpoint": 124845,
+    "channel": "P1_PIT02",
+    "reason": "Elevated residuals associated with the heating water pump supply pressure."
+  },
+  {
+    "snapshot": 894,
+    "raw_endpoint": 135663,
+    "channel": "P1_PCV01D",
+    "reason": "Extremely high residuals (104.26 at 5s) and the highest CLARO score indicate direct manipulation of this pressure control valve command."
+  },
+  {
+    "snapshot": 894,
+    "raw_endpoint": 135663,
+    "channel": "x1003_10_SETPOINT_OUT",
+    "reason": "Low mean parent residual suggests it is a source of anomaly in the temperature-control setpoint path of DCS block 1003."
+  },
+  {
+    "snapshot": 894,
+    "raw_endpoint": 135663,
+    "channel": "P1_FCV02D",
+    "reason": "High CLARO score and residuals for this command valve, which is part of the P1-TC loop controlling TIT01."
+  },
+  {
+    "snapshot": 894,
+    "raw_endpoint": 135663,
+    "channel": "P1_FCV01D",
+    "reason": "Residuals indicate an anomaly in this command valve, which works with FCV02D to maintain temperature TIT01."
+  },
+  {
+    "snapshot": 894,
+    "raw_endpoint": 135663,
+    "channel": "P1_PIT02",
+    "reason": "Significant residuals for this measurement channel associated with the heating water pump supply pressure."
+  },
+  {
+    "snapshot": 895,
+    "raw_endpoint": 135708,
+    "channel": "P1_PCV01D",
+    "reason": "Highest CLARO score and extreme 45-s residual indicate direct manipulation of the pressure control valve command."
+  },
+  {
+    "snapshot": 895,
+    "raw_endpoint": 135708,
+    "channel": "P1_FCV02D",
+    "reason": "High residuals relative to its parents suggest a direct change to this heating flow control valve command."
+  },
+  {
+    "snapshot": 895,
+    "raw_endpoint": 135708,
+    "channel": "P1_FCV01D",
+    "reason": "Significant residuals in a command channel associated with the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 895,
+    "raw_endpoint": 135708,
+    "channel": "P1_PIT02",
+    "reason": "Elevated residuals in a measurement channel that does not drive a primary documented control loop."
+  },
+  {
+    "snapshot": 895,
+    "raw_endpoint": 135708,
+    "channel": "P1_FT02Z",
+    "reason": "Residuals are present, but as a converted value from FT02, it is more likely a response than a direct target."
+  },
+  {
+    "snapshot": 917,
+    "raw_endpoint": 139085,
+    "channel": "P1_FCV03D",
+    "reason": "The extremely high 5-s residual (9.27) suggests a direct manipulation of the command for the return-tank outflow control loop P1-FC."
+  },
+  {
+    "snapshot": 917,
+    "raw_endpoint": 139085,
+    "channel": "P1_FCV02D",
+    "reason": "High residuals in both time windows indicate this valve command is likely manipulated as part of the temperature control loop P1-TC."
+  },
+  {
+    "snapshot": 917,
+    "raw_endpoint": 139085,
+    "channel": "P1_FCV01D",
+    "reason": "As a command for the other heating flow valve in the P1-TC cascade, it is a primary target for manipulation alongside FCV02D."
+  },
+  {
+    "snapshot": 917,
+    "raw_endpoint": 139085,
+    "channel": "x1003_10_SETPOINT_OUT",
+    "reason": "This DCS logic block output directly influences the temperature control setpoint path for P1-TC."
+  },
+  {
+    "snapshot": 917,
+    "raw_endpoint": 139085,
+    "channel": "P1_LCV01D",
+    "reason": "The elevated 5-s residual suggests manipulation of the command used by loop P1-LC to keep return-tank level at setpoint B3004."
+  },
+  {
+    "snapshot": 918,
+    "raw_endpoint": 139103,
+    "channel": "P1_FCV03D",
+    "reason": "Highest residuals and CLARO score, acting as a direct command for the P1-FC control loop."
+  },
+  {
+    "snapshot": 918,
+    "raw_endpoint": 139103,
+    "channel": "P1_FCV02D",
+    "reason": "High residuals and is a direct valve command for the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 918,
+    "raw_endpoint": 139103,
+    "channel": "P1_FCV01D",
+    "reason": "Significant residuals and is a direct valve command for the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 918,
+    "raw_endpoint": 139103,
+    "channel": "P1_LCV01D",
+    "reason": "Elevated residuals and is the direct command for the P1-LC level control loop."
+  },
+  {
+    "snapshot": 918,
+    "raw_endpoint": 139103,
+    "channel": "P1_PIT02",
+    "reason": "High residuals in a measurement channel that does not appear as a controlled setpoint in the process description."
+  },
+  {
+    "snapshot": 919,
+    "raw_endpoint": 139107,
+    "channel": "P1_FCV03D",
+    "reason": "Highest residuals and CLARO score for a command signal, which directly controls return-tank outflow FT03 per P1-FC loop."
+  },
+  {
+    "snapshot": 919,
+    "raw_endpoint": 139107,
+    "channel": "P1_FCV02D",
+    "reason": "High residual for a command signal that is part of the P1-TC temperature control cascade."
+  },
+  {
+    "snapshot": 919,
+    "raw_endpoint": 139107,
+    "channel": "P1_FCV01D",
+    "reason": "Command signal involved in the P1-TC loop, showing significant residuals compared to its measured position Z."
+  },
+  {
+    "snapshot": 919,
+    "raw_endpoint": 139107,
+    "channel": "P1_LCV01D",
+    "reason": "Command signal for return-tank level control (P1-LC) with a high 45-s residual."
+  },
+  {
+    "snapshot": 919,
+    "raw_endpoint": 139107,
+    "channel": "P1_PIT02",
+    "reason": "Measurement signal showing high residuals that do not correspond to a known command loop output in the provided description."
+  },
+  {
+    "snapshot": 920,
+    "raw_endpoint": 139121,
+    "channel": "P1_FCV03D",
+    "reason": "Highest residuals and CLARO score for a command channel, which directly controls return-tank outflow FT03 per P1-FC loop."
+  },
+  {
+    "snapshot": 920,
+    "raw_endpoint": 139121,
+    "channel": "P1_FCV02D",
+    "reason": "High residuals for a command channel used in the P1-TC temperature control loop to maintain TIT01."
+  },
+  {
+    "snapshot": 920,
+    "raw_endpoint": 139121,
+    "channel": "P1_FCV01D",
+    "reason": "Command channel for the P1-TC temperature control loop, showing significant residual deviation."
+  },
+  {
+    "snapshot": 920,
+    "raw_endpoint": 139121,
+    "channel": "P1_LCV01D",
+    "reason": "Command channel for return-tank level LIT01 (P1-LC), which receives feed-forward input from FCV03D."
+  },
+  {
+    "snapshot": 920,
+    "raw_endpoint": 139121,
+    "channel": "P1_PIT02",
+    "reason": "Measurement channel with high residuals, though less likely than commands to be the primary manipulation point."
+  },
+  {
+    "snapshot": 921,
+    "raw_endpoint": 139138,
+    "channel": "P1_FCV03D",
+    "reason": "Highest CLARO score and residuals, acting as the direct command for return-tank outflow (P1-FC)."
+  },
+  {
+    "snapshot": 921,
+    "raw_endpoint": 139138,
+    "channel": "P1_FCV02D",
+    "reason": "High residuals and a command signal used in the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 921,
+    "raw_endpoint": 139138,
+    "channel": "P1_LCV01D",
+    "reason": "Significant residuals for a command signal that controls return-tank level (P1-LC)."
+  },
+  {
+    "snapshot": 921,
+    "raw_endpoint": 139138,
+    "channel": "P1_FCV01D",
+    "reason": "Residuals present for a command signal used in the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 921,
+    "raw_endpoint": 139138,
+    "channel": "P1_FT03",
+    "reason": "High residuals for a measurement that serves as the process variable for the P1-FC control loop."
+  },
+  {
+    "snapshot": 1375,
+    "raw_endpoint": 214330,
+    "channel": "P1_FCV03D",
+    "reason": "Highest residuals (10.91 at 5s) and CLARO score, acting as a direct command for the P1-FC control loop."
+  },
+  {
+    "snapshot": 1375,
+    "raw_endpoint": 214330,
+    "channel": "P1_PCV01D",
+    "reason": "High residual and low mean parent residual suggest it is a primary driver in the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 1375,
+    "raw_endpoint": 214330,
+    "channel": "P1_LCV01D",
+    "reason": "Direct command for the P1-LC level control loop with significant residuals."
+  },
+  {
+    "snapshot": 1375,
+    "raw_endpoint": 214330,
+    "channel": "P1_TIT02",
+    "reason": "High residual and low mean parent residual indicate it may be a manipulated measurement rather than a response."
+  },
+  {
+    "snapshot": 1375,
+    "raw_endpoint": 214330,
+    "channel": "P1_PIT01",
+    "reason": "Significant residuals in the pressure measurement which serves as the setpoint basis for P1-PC."
+  },
+  {
+    "snapshot": 1376,
+    "raw_endpoint": 214339,
+    "channel": "P1_PCV01D",
+    "reason": "Highest short-term residual (7.09) suggests a direct command manipulation in the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 1376,
+    "raw_endpoint": 214339,
+    "channel": "P1_FCV03D",
+    "reason": "Highest CLARO score and significant 45-s residual indicate it is a primary source of anomaly for the P1-FC outflow loop."
+  },
+  {
+    "snapshot": 1376,
+    "raw_endpoint": 214339,
+    "channel": "P1_LCV01D",
+    "reason": "High residuals in this command channel suggest manipulation of the P1-LC return-tank level control loop."
+  },
+  {
+    "snapshot": 1376,
+    "raw_endpoint": 214339,
+    "channel": "P1_FT03",
+    "reason": "Significant residuals in a measurement channel that directly feeds the P1-FC control loop via setpoint B3005."
+  },
+  {
+    "snapshot": 1376,
+    "raw_endpoint": 214339,
+    "channel": "P1_FT03Z",
+    "reason": "High residuals as it is the converted value of FT03, likely responding to the same anomaly affecting the outflow rate."
+  },
+  {
+    "snapshot": 1377,
+    "raw_endpoint": 214345,
+    "channel": "P1_PCV01D",
+    "reason": "Highest CLARO score and significant residuals, acting as a direct command for pressure control (P1-PC)."
+  },
+  {
+    "snapshot": 1377,
+    "raw_endpoint": 214345,
+    "channel": "P1_FCV03D",
+    "reason": "High CLARO score and residuals, serving as the primary command for return-tank outflow (P1-FC)."
+  },
+  {
+    "snapshot": 1377,
+    "raw_endpoint": 214345,
+    "channel": "P1_LCV01D",
+    "reason": "Significant residual and high ranking, acting as a direct command to maintain return-tank level (P1-LC)."
+  },
+  {
+    "snapshot": 1377,
+    "raw_endpoint": 214345,
+    "channel": "P1_PIT01",
+    "reason": "High 5-s residual; while it is a measurement, it is the primary input for the P1-PC control loop."
+  },
+  {
+    "snapshot": 1377,
+    "raw_endpoint": 214345,
+    "channel": "P1_PP04",
+    "reason": "Direct command for the cooling pump (P1-CC), though residuals are lower than valve commands."
+  },
+  {
+    "snapshot": 1378,
+    "raw_endpoint": 214349,
+    "channel": "P1_PCV01D",
+    "reason": "Highest CLARO score and residuals, acting as a direct command for the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 1378,
+    "raw_endpoint": 214349,
+    "channel": "P1_FCV03D",
+    "reason": "High CLARO score and residuals, serving as the setpoint/command for return-tank outflow (P1-FC)."
+  },
+  {
+    "snapshot": 1378,
+    "raw_endpoint": 214349,
+    "channel": "P1_LCV01D",
+    "reason": "Significant residual and command status in the P1-LC loop that maintains return-tank level."
+  },
+  {
+    "snapshot": 1378,
+    "raw_endpoint": 214349,
+    "channel": "P1_PIT01",
+    "reason": "High 5-s residual for a measurement that is the primary feedback for the P1-PC control loop."
+  },
+  {
+    "snapshot": 1378,
+    "raw_endpoint": 214349,
+    "channel": "P1_FT03Z",
+    "reason": "Elevated residuals for a converted measurement directly linked to the FCV03D outflow command."
+  },
+  {
+    "snapshot": 1379,
+    "raw_endpoint": 214361,
+    "channel": "P1_FCV03D",
+    "reason": "Highest short-term residual (14.45) and a command signal that directly controls return-tank outflow FT03."
+  },
+  {
+    "snapshot": 1379,
+    "raw_endpoint": 214361,
+    "channel": "P1_PCV02D",
+    "reason": "High 45-s residual and a command signal used by the P1-PC loop to maintain pressure PIT01."
+  },
+  {
+    "snapshot": 1379,
+    "raw_endpoint": 214361,
+    "channel": "P1_PCV01D",
+    "reason": "Significant residuals across both time windows for a command signal in the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 1379,
+    "raw_endpoint": 214361,
+    "channel": "P1_LCV01D",
+    "reason": "A command signal for return-tank level control that receives feed-forward input from FCV03D."
+  },
+  {
+    "snapshot": 1379,
+    "raw_endpoint": 214361,
+    "channel": "P1_PP04",
+    "reason": "A pump command signal (P1-CC) whose residuals are higher than the associated process measurements."
+  },
+  {
+    "snapshot": 1380,
+    "raw_endpoint": 214383,
+    "channel": "P1_FCV03D",
+    "reason": "Highest 5-s residual and high CLARO score for a command channel in the P1-FC control loop."
+  },
+  {
+    "snapshot": 1380,
+    "raw_endpoint": 214383,
+    "channel": "P1_PCV02D",
+    "reason": "High 45-s residual and highest CLARO score for a command channel in the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 1380,
+    "raw_endpoint": 214383,
+    "channel": "P1_PCV01D",
+    "reason": "Significant residuals for a command channel that, along with PCV02D, maintains PIT01 setpoint B2016."
+  },
+  {
+    "snapshot": 1380,
+    "raw_endpoint": 214383,
+    "channel": "P1_LCV01D",
+    "reason": "Elevated residuals for a command channel in the P1-LC loop which is driven by LCV01D and feed-forward from FCV03D."
+  },
+  {
+    "snapshot": 1380,
+    "raw_endpoint": 214383,
+    "channel": "P1_PIT01",
+    "reason": "Significant residuals for a measurement channel that serves as the primary input for the P1-PC control loop."
+  },
+  {
+    "snapshot": 1447,
+    "raw_endpoint": 224106,
+    "channel": "P2_SCO",
+    "reason": "Extremely high 5-s residual (18.02) and very low mean parent residual (0.01) indicate it is the source of the anomaly in the P2 speed controller."
+  },
+  {
+    "snapshot": 1447,
+    "raw_endpoint": 224106,
+    "channel": "P1_PIT02",
+    "reason": "High residuals and a relatively low mean parent residual suggest direct manipulation of this pressure measurement."
+  },
+  {
+    "snapshot": 1447,
+    "raw_endpoint": 224106,
+    "channel": "P1_FCV02D",
+    "reason": "As a command signal for the temperature control loop (P1-TC), it is more likely to be a target than its corresponding position feedback P1_FCV02Z."
+  },
+  {
+    "snapshot": 1447,
+    "raw_endpoint": 224106,
+    "channel": "P1_LCV01D",
+    "reason": "This is a direct valve command for the return-tank level control loop (P1-LC), making it a primary candidate for manipulation."
+  },
+  {
+    "snapshot": 1447,
+    "raw_endpoint": 224106,
+    "channel": "P1_FCV03D",
+    "reason": "This is a direct outflow valve command (P1-FC) and provides feed-forward input to the P1-LC loop."
+  },
+  {
+    "snapshot": 1448,
+    "raw_endpoint": 224123,
+    "channel": "P1_PCV01D",
+    "reason": "High 5-s residual and low mean parent residual suggest direct manipulation of the pressure control valve command."
+  },
+  {
+    "snapshot": 1448,
+    "raw_endpoint": 224123,
+    "channel": "P1_FCV02D",
+    "reason": "Significant residuals in a command channel used by P1-TC to maintain temperature TIT01."
+  },
+  {
+    "snapshot": 1448,
+    "raw_endpoint": 224123,
+    "channel": "P1_PIT02",
+    "reason": "Highest 45-s residual indicates an anomaly in the heating water pump supply pressure measurement."
+  },
+  {
+    "snapshot": 1448,
+    "raw_endpoint": 224123,
+    "channel": "P1_FCV02Z",
+    "reason": "High residuals in the measured position of FCV02, which is driven by command P1_FCV02D."
+  },
+  {
+    "snapshot": 1448,
+    "raw_endpoint": 224123,
+    "channel": "P2_SCO",
+    "reason": "Significant CLARO score for the speed controller output that drives the rotor kit motor."
+  },
+  {
+    "snapshot": 1449,
+    "raw_endpoint": 224135,
+    "channel": "P1_PCV01D",
+    "reason": "Highest CLARO score and residuals, acting as a direct command for the P1-PC loop to maintain pressure PIT01."
+  },
+  {
+    "snapshot": 1449,
+    "raw_endpoint": 224135,
+    "channel": "P1_FCV02D",
+    "reason": "High residuals and CLARO score, serving as a direct valve command within the P1-TC temperature control loop."
+  },
+  {
+    "snapshot": 1449,
+    "raw_endpoint": 224135,
+    "channel": "P1_PIT01",
+    "reason": "Significant 5-s residual; it is the primary measurement for the P1-PC pressure control loop."
+  },
+  {
+    "snapshot": 1449,
+    "raw_endpoint": 224135,
+    "channel": "P1_PIT02",
+    "reason": "High residuals and CLARO score, representing a direct measurement of heating water pump supply pressure."
+  },
+  {
+    "snapshot": 1449,
+    "raw_endpoint": 224135,
+    "channel": "P1_FCV02Z",
+    "reason": "Elevated residuals; while it is a measured position, it directly tracks the FCV02D command in the P1-TC loop."
+  },
+  {
+    "snapshot": 1525,
+    "raw_endpoint": 236595,
+    "channel": "P1_PCV01D",
+    "reason": "Highest CLARO score and significant residuals (6.74 at 5s) for a valve command in the P1-PC loop."
+  },
+  {
+    "snapshot": 1525,
+    "raw_endpoint": 236595,
+    "channel": "P1_PP04D",
+    "reason": "High CLARO score and positive residuals for a pump command in the P1-CC cooling system."
+  },
+  {
+    "snapshot": 1525,
+    "raw_endpoint": 236595,
+    "channel": "P1_LCV01D",
+    "reason": "Significant residuals for a valve command used by the P1-LC loop to maintain return-tank level."
+  },
+  {
+    "snapshot": 1525,
+    "raw_endpoint": 236595,
+    "channel": "P1_FCV03D",
+    "reason": "Residuals present for a valve command that controls return-tank outflow in the P1-FC loop."
+  },
+  {
+    "snapshot": 1525,
+    "raw_endpoint": 236595,
+    "channel": "P1_LIT01",
+    "reason": "Elevated residuals for a measurement that serves as the primary feedback for the P1-LC control loop."
+  }
+]

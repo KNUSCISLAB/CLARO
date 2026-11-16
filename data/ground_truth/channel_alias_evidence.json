@@ -1,0 +1,100 @@
+{
+  "candidate_rule": "include all HAI P1/P2/P3 channels and boiler-internal x1001/x1002/x1003 outputs; independent of attack labels",
+  "verified": [
+    {
+      "dataset": "hai",
+      "source_point": "P1_B2016",
+      "channel": "x1001_15_ASSIGN_OUT",
+      "status": "explicit_duplicate_point",
+      "source": "hai_dataset_technical_details.pdf",
+      "source_location": "printed p.15, row9: 1001.15-OUT is duplicated as P1_B2016; raw header names block 1001_15 ASSIGN_OUT",
+      "ranking_change": "retained in original input but excluded from legacy candidate set; included in new online path"
+    }
+  ],
+  "candidates": [
+    {
+      "dataset": "hai",
+      "source_point": "P1_B3004",
+      "candidate_channel": "x1002_07_SETPOINT_OUT",
+      "status": "controller-topology-supported; not explicit channel-identity annotation",
+      "source": "graph/boiler/dcs_1002h.json",
+      "edges": [
+        {
+          "label": "DM-LIT01",
+          "source": "1002.1",
+          "target": "1002.21",
+          "key": 0
+        },
+        {
+          "label": "1002.7-OUT",
+          "source": "1002.7",
+          "target": "1002.21",
+          "key": 0
+        },
+        {
+          "label": "SP",
+          "source": "HMI",
+          "target": "1002.7",
+          "key": 0
+        }
+      ],
+      "usage": "sensitivity only; excluded from primary exact-target metrics"
+    },
+    {
+      "dataset": "hai",
+      "source_point": "P1_B3005",
+      "candidate_channel": "x1002_08_SETPOINT_OUT",
+      "status": "controller-topology-supported; not explicit channel-identity annotation",
+      "source": "graph/boiler/dcs_1002h.json",
+      "edges": [
+        {
+          "label": "DM-FT03Z",
+          "source": "1002.4",
+          "target": "1002.9",
+          "key": 0
+        },
+        {
+          "label": "1002.8-OUT",
+          "source": "1002.8",
+          "target": "1002.9",
+          "key": 0
+        },
+        {
+          "label": "SP",
+          "source": "HMI",
+          "target": "1002.8",
+          "key": 0
+        }
+      ],
+      "usage": "sensitivity only; excluded from primary exact-target metrics"
+    }
+  ],
+  "episode_target_repairs": [
+    {
+      "attack_id": "A208",
+      "replace": {
+        "P1_FIT": "P1_FT03"
+      },
+      "append": [],
+      "basis": "technical-details v4.0 printed p.28 AP42 explicitly lists PV2=P1_FT03; p.31 timetable truncates it as P1_FIT"
+    },
+    {
+      "attack_id": "A206",
+      "replace": {
+        "P1_FIT": "P1_FIT01"
+      },
+      "append": [],
+      "basis": "printed p.25 AP03 lists PV2=P1_FIT01; no FT01 alias accepted"
+    },
+    {
+      "attack_id": "A106",
+      "replace": {},
+      "append": [
+        "P1_FIT01"
+      ],
+      "basis": "p.31 A106 SP1PV1PV2/AP03 omits its third point; p.25 defines PV2=P1_FIT01; conservatively retain unresolved point"
+    }
+  ],
+  "source_pdf_sha256": "0668345c4e80331b918fe17c81f8f363b13bd22886831d286e761bc62b71a556",
+  "controller_graph_sha256": "d3f060df16c97a5dbf18907199d7e75f61cc58587100fe76b9d4f8a6be354fd6"
+}

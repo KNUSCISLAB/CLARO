@@ -1,0 +1,7 @@
+numpy>=1.22
+scipy>=1.8
+scikit-learn>=1.0
+pandas>=1.4          # preprocessing and Granger graph only
+statsmodels>=0.13    # Granger graph only
+matplotlib>=3.5      # figure only
+requests>=2.25       # LLM queries only (not needed when replaying the cache)
