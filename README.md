@@ -190,11 +190,3 @@ original research code:
 - Step 5 reproduces the manuscript figure; the rasterized pages (200 dpi) are identical.
 
 The graph-screening LLM response itself (step 2 with `--query-llm`) was not re-queried.
-
-## Citation
-
-*[Placeholder: citation to be added after publication.]*
-
-## License
-
-*[Placeholder: license to be decided by the authors.]*
