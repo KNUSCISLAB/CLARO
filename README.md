@@ -42,10 +42,8 @@ Optional modules (AR term, 5-s window, per-channel calibrated detector, calibrat
 ranking; 16 combinations) are selected on the validation prefix by joint J@1, then J@5, then
 lower prefix normal-time alarm fraction, then fewer changes from the base configuration
 (lag-2 SEM, 45-s window, maximum-residual detector, attribution score). The selection is
-written to disk before the suffix is scored. In the original experiments this criterion
-pooled the HAI prefix with the prefix of a second dataset that is not part of this
-repository; here it is applied to the HAI prefix alone and selects the same configuration
-(its prefix J@1 of 13/19 is the unique maximum on HAI).
+written to disk before the suffix is scored. The selected configuration attains a prefix
+J@1 of 13/19, the unique maximum among the 16 combinations.
 
 ## Repository layout
 
