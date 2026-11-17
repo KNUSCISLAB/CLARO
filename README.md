@@ -77,8 +77,7 @@ The code was run with Python 3.9 (numpy 2.0.2, scikit-learn 1.5.0) for steps 3 a
 Python 3.9 with numpy 1.25, pandas 1.4.3 and statsmodels 0.13.2 for steps 1 and 2, and
 Python 3.10 with matplotlib 3.10.9 for step 5.
 
-**LLM (optional).** The LLM stages use a local [Ollama](https://ollama.com) server
-(`http://localhost:11434`, override with `OLLAMA_URL`) and the model tag `gemma4:31b`
+**LLM (optional).** The LLM stages use a local [Ollama](https://ollama.com) server and the model tag `gemma4:31b`
 (temperature 0.05; seed 11, and seeds 12 and 13 for the repeated suffix runs). All 328
 re-ranking and explanation responses are stored in `results/llm_cache.json`, keyed by the
 SHA-256 of `json.dumps([model, system prompt, user prompt, seed])`, so step 4 runs without a
